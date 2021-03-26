@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> lang="de">
+
+<head>
+<title>Portofolio-Website</title>
+
+</head>
+
+<body>
+
+<h1>Bilder</h1>
+<img src="foto1.jpeg">
+<img src="foto2.jpeg">
+<img src="foto3.jpeg">
+<img src="foto4.jpeg">
+
+
+
+
+
+<h1>Animation</h1>
+<img src="clip1.mp4">
+<img src="clip2.mp4">
+<img src="clip3.mp4">
+<img src="clip4.mp4">
+
+<h1>Grafikdesign</h1>
+<img src="grafik1.jpeg">
+<img src="grafik2.jpeg">
+<img src="grafik3.jpeg">
+<img src="grafik4.jpeg">
+
+</body> </html>
+
