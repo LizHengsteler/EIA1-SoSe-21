@@ -1,7 +1,9 @@
 
 header {   
     background-color: #ac899e;
+    color: cornsilk;
     text-align: center;
+    font-family: sans-serif;
     height: 400px;
     width: 800px;
     margin-right: auto;
@@ -11,43 +13,98 @@ header {
     
 }
 body {
+   font-family: sans-serif;
    background-image: url("bg.png");
-   font-family:Georgia, 'Times New Roman', Times, serif, sans-serif;
+   margin-top: 0;
+   
+}
+
+.inputbackground {
+    background-color: #ac899e;
 }
 
 img {
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    
 
 }
 
 .navigation {
-    text-align: right;
-    float: left;
-    background-color: #c0a4b5;
-    h
-    
-    
-}
-#sticky {
+    font-family: sans-serif;
+    color: cornsilk;
     position: fixed;
+    text-align: right;
+    margin-left: 500px;
+    
+    }
+
+.icon {
+    opacity: 70%;
+
 }
-li a{
-    display: inline;
-    float: right;
+.icon:hover{
+    opacity: 100%;
+}
+
+.current {
+    color: black;
+    background-color: #644b5a;
 }
     
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-a {
-    margin: auto;
+
+
+h1 {
+   color: cornsilk;
+   font-family: sans-serif;
+   margin: 0;
+   padding-top: 200px;
+   
+   }
+
+h2 , h3 {
+    font-family: sans-serif;
 }
+
+li {
+    display: inline;
+    
+}
+
+
+.inputbackground {
+    background-color: #ac899e;
+}
+
+
+.active:hover{
+   font-size: 150%;
+   
+}
+
+.link {
+    color: black;
+}
+.link:hover{
+    font-size: 150%;
+}
+
+a {
+    color: cornsilk;
+    margin: auto;
+    text-decoration: none;
+
+    
+}
+
+.inputbackground {
+    background-color: #ac899e;
+}
+
+
+
 main {
+    font-family: sans-serif;
     margin: auto;
     width: 800px;
     }
@@ -55,6 +112,11 @@ main {
 div {
     font-family: sans-serif;
 }
-footer {
+
+.footer {
+    font-family: sans-serif;
+    color: black;
+    padding: auto;
+
 
 }

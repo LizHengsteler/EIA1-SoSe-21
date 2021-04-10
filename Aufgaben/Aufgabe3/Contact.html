@@ -12,39 +12,40 @@
 
 <body>
   <header> 
-    <div class="navigation" id="sticky">
+    <div class="navigation">
+      <nav>
+        <ul> 
+     <li> <a class="active" href="../Aufgabe3/About Me.html"> About me </a> </li>
+     <li> <a class="active" href="../Aufgabe3/Portfolio.html">  Portfolio</a> </li>
+     <li class="current"><a class="active" href="../Aufgabe3/Contact.html"> Contact </a> </li>
+     </ul>
+     </nav>
+     </div>
+    <h1>Kontakt</h1>
     <br>
-     <a href="../Aufgabe3/About Me.html"> <h3>About me</h3> </a> 
-     <a href="../Aufgabe3/Portfolio.html">  <h3>Portfolio</h3></a> 
-     <a href="../Aufgabe3/Contact.html"> <h3>Contact</h3> </a> 
-    
-    </div>
+    <a href="https://www.instagram.com/lizhengsteler/" target="_blank"> <img class="icon" src="instaicon.webp" height="50px" width="50px"> </a>
+     
+
+
   </header>
 <main>
 
   <div>
     <p> <b>Mail</b> liz.hengsteler@hs-furtwangen.de</p>
-    <p> <a href="https://www.instagram.com/lizhengsteler/"target="_blank"> <b>Instagram</b></a>
-      <p> <a href="https://www.facebook.com/liz.hengsteler" target="_blank"> <b>Facebook</b></a></p>
-
+   
   </div>
   <div>
     <form method="post">
-      <label>Name</label>
-      <p><input type="text" name="name"></p>
-      <label>E-Mail Adresse</label>
-     <p><input type="email" name="email" required></p>
-     <p><label>Nachricht</label></p>
-     <textarea name="nachricht" cols="30" rows="10"></textarea>
+      <p><input class="inputbackground" type="text" placeholder="Vorname" name="Vorname"></p>
+      <p><input class="inputbackground" type="text" placeholder="Nachname" name="Nachname"></p>
+     <p><input class="inputbackground" type="text" placeholder="E-Mail" name="email" required></p>
+     <textarea class="inputbackground" name="nachricht" placeholder="Nachricht" cols="30" rows="10"></textarea>
      <p><button> Senden</button></p>
     </form>
+    <p>Mit Absenden bestätige ich die Datenschutzbedingungen</p>
   </div>
 </main>
-<footer>
-  
 
-</footer>
-    
 
 
 </body>
