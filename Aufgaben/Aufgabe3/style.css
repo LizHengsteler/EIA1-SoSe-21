@@ -33,9 +33,14 @@ img {
 .navigation {
     font-family: sans-serif;
     color: cornsilk;
+    background-color:#ac899e;
     position: fixed;
     text-align: right;
     margin-left: 500px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     
     }
 
@@ -78,7 +83,7 @@ li {
 
 
 .active:hover{
-   font-size: 150%;
+   color: black
    
 }
 
