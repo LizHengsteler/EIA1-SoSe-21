@@ -1,3 +1,9 @@
 body {
     background-image: url(bg.png);
 }
+
+.wrapper {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+ }
