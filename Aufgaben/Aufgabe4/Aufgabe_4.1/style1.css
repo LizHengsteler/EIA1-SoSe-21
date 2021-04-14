@@ -1,0 +1,45 @@
+body {
+    background-image: url(bg.png);
+}
+
+p {
+    color: ivory;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    position:relative;
+    bottom: 500px;
+    left: 500px;
+
+}
+
+.wrapper {
+   position: relative;
+   top: 200px;
+   left: 400px;
+}
+
+.penguin {
+    position: relative;
+    top: 50px;
+    left: 850px;
+
+}
+
+.shell {
+    position: relative;
+    bottom: 100px;
+    left: 350px;
+
+
+}
+
+.schrift {
+    color: ivory;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    position:relative;
+    bottom: 450px;
+    left: 500px;
+
+
+}

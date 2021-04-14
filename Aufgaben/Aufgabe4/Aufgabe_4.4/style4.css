@@ -1,0 +1,26 @@
+body {
+    background-image: url(bg.png);
+}
+
+.wrapper {
+    position: relative;
+    top: 200px;
+    left: 400px;
+ }
+
+ h1 {
+     color: ivory;
+     position: relative;
+     top: -150px;
+     left: 500px;
+ }
+
+ label {
+    color: ivory;
+ }
+
+ form {
+     position: relative;
+     top: -150px;
+     left: 500px;
+ }

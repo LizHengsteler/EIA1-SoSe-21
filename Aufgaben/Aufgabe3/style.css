@@ -41,7 +41,7 @@ img {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: auto;
+    
     
     }
 
@@ -92,7 +92,8 @@ li {
     color: black;
 }
 .link:hover{
-    font-size: 150%;
+    background-color: #ac899e ;
+    color: cornsilk;
 }
 
 a {

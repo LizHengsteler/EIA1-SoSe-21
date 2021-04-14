@@ -1,0 +1,42 @@
+body {
+    background-image: url(bg.png);
+}
+
+.wrapper {
+    position: relative;
+    top: 200px;
+    left: 400px;
+ }
+
+ .schrift {
+    color: ivory;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    position: relative;
+    top: -200px;
+    left: 500px;
+    
+    }
+ 
+.muschel1 {
+    position: relative;
+    top: -75px;
+    left: 500px;
+}
+
+.muschel2 {
+    position: relative;
+    top: -200px;
+    left: 600px;
+}
+
+.muschel3 {
+    position: relative;
+    top: -100px;
+    left: 700px;
+}
+
+.hover:hover {
+    background-image: url(muschel_perle.png);
+    
+}
