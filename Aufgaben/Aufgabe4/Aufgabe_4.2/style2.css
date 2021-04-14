@@ -22,13 +22,27 @@ body {
     position: relative;
     top: -75px;
     left: 500px;
+    
+    
+}
+.muschel1:hover {
+    
+    content: url(muschel_perle.png);
+
 }
 
 .muschel2 {
     position: relative;
     top: -200px;
     left: 600px;
+    
 }
+
+.muschel2:hover {
+    
+    content: url(muschel_perle.png);
+}
+
 
 .muschel3 {
     position: relative;
@@ -36,7 +50,8 @@ body {
     left: 700px;
 }
 
-.hover:hover {
-    background-image: url(muschel_perle.png);
+.muschel3:hover {
+    content: url(muschel_perle.png);
     
 }
+

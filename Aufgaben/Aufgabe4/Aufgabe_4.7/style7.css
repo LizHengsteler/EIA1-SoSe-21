@@ -2,3 +2,20 @@ body {
     background-image: url(bg.png);
     
 }
+
+.wrapper {
+    position: relative;
+    top: 200px;
+    left: 400px;
+ }
+
+ iframe {
+     position: absolute;
+     top: 260px;
+     left: 475px;
+     z-index: 10px;
+ }
+
+.band {
+  
+ }
