@@ -7,3 +7,62 @@ body {
     top: 200px;
     left: 400px;
  }
+
+ h1 {
+     color: whitesmoke;
+     position: absolute;
+     top: 250px;
+     left: 435px;
+    
+ }
+
+ p {
+     color: whitesmoke;
+     position: absolute;
+     top: 375px;
+     left: 435px;
+    
+
+ }
+
+ video {
+     position: absolute;
+     top: 228px;
+     left: 725px;
+ }
+
+ .m1 {
+     position: relative;
+     top: 300px;
+     left: 450px;
+ }
+
+ .m2 {
+    position: relative;
+    top: 475px;
+    left: 500px;
+}
+
+.m3 {
+    position: relative;
+    top: 200px;
+    left: 600px;
+}
+
+.stern1 {
+    position: relative;
+    top: 130px;
+    left: 500px;
+}
+
+.stern2 {
+    position: relative;
+    top: 400px;
+    left: 380px;
+}
+
+.stern3 {
+    position: relative;
+    top: 230px;
+    left:500px;
+}
