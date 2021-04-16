@@ -20,7 +20,12 @@ body {
  }
 
  form {
+     color: ivory;
      position: relative;
      top: -150px;
      left: 500px;
+ }
+
+ p {
+    color: ivory;
  }
