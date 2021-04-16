@@ -13,6 +13,12 @@ body {
      position: absolute;
      top: 260px;
      left: 475px;
-     z-index: 10px;
+     z-index: 1;
  }
 
+.band {
+    position: relative;
+    top: 190px;
+    left: 150px;
+    z-index: 2;
+}
