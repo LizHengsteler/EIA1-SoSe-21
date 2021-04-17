@@ -1,62 +1,51 @@
 body {
-    background-image: url(bg.png);
+  background-image: url(bg.png);
 }
 
 .wrapper {
-    position: absolute;
-    height: 400px;
-    width: 600px;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%,-50%);
-    background-image: url(wrapperbg.png);
+  position: absolute;
+  height: 400px;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(wrapperbg.png);
 }
 
- .schrift {
-    color: ivory;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
-    position: absolute;
-    top: 20px;
-    left: 50px;
-    
-    }
- 
+.schrift {
+  color: ivory;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 30px;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
 .muschel1 {
-    position: absolute;
-    top: 450px;
-    left: 260px;
-    
-    
-    
+  position: absolute;
+  top: 250px;
+  left: 60px;
 }
 .muschel1:hover {
-    content: url(muschel_perle.png);
-    
+  content: url(muschel_perle.png);
 }
 
 .muschel2 {
-    position: absolute;
-    top: 320px;
-    left: 400px;
-    
+  position: absolute;
+  top: 130px;
+  left: 250px;
 }
 
 .muschel2:hover {
-    
-    content: url(muschel_perle.png);
+  content: url(muschel_perle.png);
 }
-
 
 .muschel3 {
-    position: absolute;
-    top: 400px;
-    left: 600px;
+  position: absolute;
+  top: 250px;
+  left: 450px;
 }
-    
 
 .muschel3:hover {
-    content: url(muschel_perle.png);
-    
+  content: url(muschel_perle.png);
 }
-
