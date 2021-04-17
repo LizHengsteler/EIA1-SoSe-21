@@ -1,68 +1,72 @@
 body {
-    background-image: url(bg.png);
+  background-image: url(bg.png);
 }
 
 .wrapper {
-    position: absolute;
-    top: 200px;
-    left: 400px;
- }
+  position: absolute;
+  height: 400px;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(wrapperbg.png);
+}
 
- h1 {
-     color: whitesmoke;
-     position: absolute;
-     top: 250px;
-     left: 435px;
-    
- }
+h1 {
+  color: whitesmoke;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+}
 
- p {
-     color: whitesmoke;
-     position: absolute;
-     top: 375px;
-     left: 435px;
-    
+p {
+  color: whitesmoke;
+  position: absolute;
+  top: 150px;
+  left: 40px;
+}
 
- }
+video {
+  position: absolute;
+  top: 29px;
+  left: 328px;
+  z-index: 1;
+}
 
- video {
-     position: absolute;
-     top: 228px;
-     left: 725px;
- }
+.m1 {
+  position: absolute;
+  top: 90px;
+  left: 30px;
+}
 
- .m1 {
-     position: relative;
-     top: 300px;
-     left: 450px;
- }
-
- .m2 {
-    position: relative;
-    top: 475px;
-    left: 500px;
+.m2 {
+  position: absolute;
+  top: 280px;
+  left: 150px;
 }
 
 .m3 {
-    position: relative;
-    top: 200px;
-    left: 600px;
+  position: absolute;
+  top: 50px;
+  left: 370px;
+  z-index: 2;
 }
 
 .stern1 {
-    position: relative;
-    top: 130px;
-    left: 500px;
+  position: relative;
+  top: 80px;
+  left: 500px;
+  z-index: 3;
 }
 
 .stern2 {
-    position: relative;
-    top: 400px;
-    left: 380px;
+  position: absolute;
+  top: 70px;
+  left: 220px;
 }
 
 .stern3 {
-    position: relative;
-    top: 230px;
-    left:500px;
+  position: absolute;
+  top: 270px;
+  z-index: 3;
 }

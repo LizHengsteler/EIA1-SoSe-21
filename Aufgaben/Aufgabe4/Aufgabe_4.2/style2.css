@@ -3,37 +3,42 @@ body {
 }
 
 .wrapper {
-    position: relative;
-    top: 200px;
-    left: 400px;
- }
+    position: absolute;
+    height: 400px;
+    width: 600px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+    background-image: url(wrapperbg.png);
+}
 
  .schrift {
     color: ivory;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 30px;
-    position: relative;
-    top: -200px;
-    left: 500px;
+    position: absolute;
+    top: 20px;
+    left: 50px;
     
     }
  
 .muschel1 {
-    position: relative;
-    top: -75px;
-    left: 500px;
+    position: absolute;
+    top: 450px;
+    left: 260px;
+    
     
     
 }
 .muschel1:hover {
     content: url(muschel_perle.png);
-
+    
 }
 
 .muschel2 {
-    position: relative;
-    top: -200px;
-    left: 600px;
+    position: absolute;
+    top: 320px;
+    left: 400px;
     
 }
 
@@ -44,10 +49,11 @@ body {
 
 
 .muschel3 {
-    position: relative;
-    top: -100px;
-    left: 700px;
+    position: absolute;
+    top: 400px;
+    left: 600px;
 }
+    
 
 .muschel3:hover {
     content: url(muschel_perle.png);

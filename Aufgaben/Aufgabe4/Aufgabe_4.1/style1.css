@@ -6,40 +6,45 @@ p {
     color: ivory;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
-    position:relative;
-    bottom: 500px;
-    left: 500px;
+   
 
 }
 
 .wrapper {
-   position: relative;
-   top: 200px;
-   left: 400px;
+    position: absolute;
+    height: 400px;
+    width: 600px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   background-image: url(wrapperbg.png);
 }
 
 .penguin {
-    position: relative;
-    top: 50px;
-    left: 850px;
-
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
 }
 
 .shell {
-    position: relative;
-    bottom: 100px;
-    left: 350px;
-
-
+    position: absolute;
+    bottom:-15px;
+    left:-60px;
 }
+
 
 .schrift {
     color: ivory;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 15px;
-    position:relative;
-    bottom: 450px;
-    left: 500px;
-
+    position: absolute;
+    top: 180px;
+    left: 60px;
+}
+    
+.überschrift {
+    position: absolute;
+    top: 50px;
+    left: 60px;
 
 }
