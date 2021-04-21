@@ -12,10 +12,17 @@ body {
 
 a {
     display: block;
+    text-align: center;
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
     font-size: 20px;
+    margin: 20px;
+    background-color: rgb(224, 146, 146);
+    width: 130px;
+    height: 30px;
+    border-radius: 10px;
+  
     
 }
 
