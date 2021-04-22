@@ -12,63 +12,65 @@ var australien18: number = 1993
 var australien08: number = 2100.5
 
 var world = europa18 + afrika18 + südamerika18 + nordamerika18 + asien18 + australien18;
-var relativeuropa = europa18 / world * 100;
-var relativafrika = afrika18 / world * 100;
-var relativsüdamerika = südamerika18 / world * 100;
-var relativnordamerika = nordamerika18 / world * 100;
-var relativasien = asien18 / world * 100;
-var relativaustralien = australien18 / world * 100;
+var relativeuropa = Math.round(europa18 / world * 100 * 100) / 100;
+var relativafrika =  Math.round(afrika18 / world * 100 * 100) / 100;
+var relativsüdamerika = Math.round(südamerika18 / world * 100 * 100) / 100;
+var relativnordamerika = Math.round(nordamerika18 / world * 100 * 100) / 100;
+var relativasien = Math.round(asien18 / world * 100 * 100) / 100;
+var relativaustralien = Math.round(australien18 / world * 100 * 100) / 100;
 
-var differenzeuropa = (europa18 - europa08) / europa08 * 100;
-var differenzafrika = (afrika18 - afrika08) / afrika08 * 100;
-var differenzsüdamerika = (südamerika18 - südamerika08) / südamerika08 * 100;
-var differenznordamerika = (nordamerika18 - nordamerika08) / nordamerika08 * 100;
-var differenzasien = (asien18 - asien08) / asien08 * 100;
-var differenzaustralien = (australien18 - australien08) / australien08 * 100;
+var differenzeuropa = Math.round((europa18 - europa08) / europa08 * 100 * 100) / 100;
+var differenzafrika = Math.round((afrika18 - afrika08) / afrika08 * 100 * 100) / 100;
+var differenzsüdamerika = Math.round((südamerika18 - südamerika08) / südamerika08 * 100 * 100) / 100;
+var differenznordamerika = Math.round((nordamerika18 - nordamerika08) / nordamerika08 * 100 * 100) / 100;
+var differenzasien = Math.round((asien18 - asien08) / asien08 * 100 * 100) / 100;
+var differenzaustralien = Math.round((australien18 - australien08) / australien08 * 100 * 100) / 100;
 
-var emissioneuropa = europa18 - europa08;
-var emissionafrika = afrika18 - afrika08;
-var emissionsüdamerika = südamerika18 - südamerika08;
-var emissionnordamerika = nordamerika18 - nordamerika08; 
-var emissionasien = asien18 - asien08;
-var emissionaustralien = australien18 - australien08;
+var emissioneuropa = Math.round(europa18 - europa08 * 100) / 100;
+var emissionafrika = Math.round(afrika18 - afrika08 * 100) / 100;
+var emissionsüdamerika = Math.round(südamerika18 - südamerika08 * 100) / 100;
+var emissionnordamerika = Math.round(nordamerika18 - nordamerika08 * 100) / 100; 
+var emissionasien = Math.round(asien18 - asien08 * 100) / 100;
+var emissionaustralien = Math.round(australien18 - australien08 * 100) / 100;
+
+
 
 
 
 console.log("Die Emission von Europa ist: " + europa18 + "kg CO2");
 console.log("Relativ zur Gesamtemission der Welt verursacht Europa damit " + relativeuropa + "%");
 console.log("Für Europa hat sich 2018 im Vergleich zu 2008 die Emission um " + differenzeuropa + "% verändert");
-console.log("2018 im Vergleich zu 2008 sind das" + emissioneuropa + "kg CO2");
+console.log("2018 im Vergleich zu 2008 sind das " + emissioneuropa + "kg CO2");
 
 
 console.log("Die Emission von Nordamerika ist: " + nordamerika18 + "kg CO2");
 console.log("Relativ zur Gesamtemission der Welt verursacht Nordamerika damit " + relativnordamerika + "%");
 console.log("Für Nordamerika hat sich 2018 im Vergleich zu 2008 die Emission um " + differenznordamerika + "% verändert");
-console.log("2018 im Vergleich zu 2008 sind das" + emissionnordamerika  +"kg CO2");
+console.log("2018 im Vergleich zu 2008 sind das " + emissionnordamerika  +"kg CO2");
 
 
 console.log("Die Emission von Südamerika ist: " + südamerika18 + "kg CO2");
 console.log("Relativ zur Gesamtemission der Welt verursacht Südamerika damit " + relativsüdamerika + "%");
 console.log("Für Südamerika hat sich 2018 im Vergleich zu 2008 die Emission um " + differenzsüdamerika + "% verändert");
-console.log("2018 im Vergleich zu 2008 sind das" + emissionsüdamerika + "kg CO2");
+console.log("2018 im Vergleich zu 2008 sind das " + emissionsüdamerika + "kg CO2");
 
 
 console.log("Die Emission von Afrika ist: " + afrika18 + "kg CO2");
 console.log("Relativ zur Gesamtemission der Welt verursacht Afrika damit " + relativafrika + "%");
 console.log("Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um " + differenzafrika + "% verändert");
-console.log("2018 im Vergleich zu 2008 sind das" + emissionafrika + "kg CO2");
+console.log("2018 im Vergleich zu 2008 sind das " + emissionafrika + "kg CO2");
 
 
 console.log("Die Emission von Asien ist: " + asien18 + "kg CO2");
 console.log("Relativ zur Gesamtemission der Welt verursacht Asien damit " + relativasien + "%");
 console.log("Für Asien hat sich 2018 im Vergleich zu 2008 die Emission um " + differenzasien + "% verändert");
-console.log("2018 im Vergleich zu 2008 sind das" + emissionasien + "kg CO2");
+console.log("2018 im Vergleich zu 2008 sind das " + emissionasien + "kg CO2");
 
 
 console.log("Die Emission von Australien ist: " + australien18 + "kg CO2");
 console.log("Relativ zur Gesamtemission der Welt verursacht Australien damit " + relativaustralien + "%");
 console.log("Für Australien hat sich 2018 im Vergleich zu 2008 die Emission um " + differenzaustralien + "% verändert");
-console.log("2018 im Vergleich zu 2008 sind das" + emissionaustralien +"kg CO2");
+console.log("2018 im Vergleich zu 2008 sind das " + emissionaustralien +"kg CO2");
 
 
 
