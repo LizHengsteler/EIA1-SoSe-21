@@ -1,15 +1,15 @@
-var europa18: number = 4209.3
-var europa08: number = 4965.7
-var afrika18: number = 1235.5
-var afrika08: number = 1028
-var südamerika18: number = 1261.5
-var südamerika08: number = 1132.6
-var nordamerika18: number = 6035.6
-var nordamerika08: number = 6600.4
-var asien18: number = 16274.1
-var asien08: number = 12954.7
-var australien18: number = 1993
-var australien08: number = 2100.5
+var europa18: number = 4209.3;
+var europa08: number = 4965.7;
+var afrika18: number = 1235.5;
+var afrika08: number = 1028;
+var südamerika18: number = 1261.5;
+var südamerika08: number = 1132.6;
+var nordamerika18: number = 6035.6;
+var nordamerika08: number = 6600.4;
+var asien18: number = 16274.1;
+var asien08: number = 12954.7;
+var australien18: number = 1993;
+var australien08: number = 2100.5;
 
 var world = europa18 + afrika18 + südamerika18 + nordamerika18 + asien18 + australien18;
 var relativeuropa = Math.round(europa18 / world * 100 * 100) / 100;
