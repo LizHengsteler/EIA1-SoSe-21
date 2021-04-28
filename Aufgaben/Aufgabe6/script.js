@@ -1,0 +1,51 @@
+var europa = "Europa";
+var afrika = "Afrika";
+var südamerika = "Südamerika";
+var nordamerika = "Nordamerika";
+var asien = "Asien";
+var australien = "Australien";
+var europa18 = 4209.3;
+var europa08 = 4965.7;
+var afrika18 = 1235.5;
+var afrika08 = 1028;
+var südamerika18 = 1261.5;
+var südamerika08 = 1132.6;
+var nordamerika18 = 6035.6;
+var nordamerika08 = 6600.4;
+var asien18 = 16274.1;
+var asien08 = 12954.7;
+var australien18 = 2100.5;
+var australien08 = 1993;
+var world = europa18 + afrika18 + südamerika18 + nordamerika18 + asien18 + australien18;
+var relativeuropa = Math.round(europa18 / world * 100 * 100) / 100;
+var relativafrika = Math.round(afrika18 / world * 100 * 100) / 100;
+var relativsüdamerika = Math.round(südamerika18 / world * 100 * 100) / 100;
+var relativnordamerika = Math.round(nordamerika18 / world * 100 * 100) / 100;
+var relativasien = Math.round(asien18 / world * 100 * 100) / 100;
+var relativaustralien = Math.round(australien18 / world * 100 * 100) / 100;
+var differenzeuropa = Math.round((europa18 - europa08) / europa08 * 100 * 100) / 100;
+var differenzafrika = Math.round((afrika18 - afrika08) / afrika08 * 100 * 100) / 100;
+var differenzsüdamerika = Math.round((südamerika18 - südamerika08) / südamerika08 * 100 * 100) / 100;
+var differenznordamerika = Math.round((nordamerika18 - nordamerika08) / nordamerika08 * 100 * 100) / 100;
+var differenzasien = Math.round((asien18 - asien08) / asien08 * 100 * 100) / 100;
+var differenzaustralien = Math.round((australien18 - australien08) / australien08 * 100 * 100) / 100;
+var emissioneuropa = europa18 - europa08;
+var emissionafrika = afrika18 - afrika08;
+var emissionsüdamerika = südamerika18 - südamerika08;
+var emissionnordamerika = nordamerika18 - nordamerika08;
+var emissionasien = asien18 - asien08;
+var emissionaustralien = australien18 - australien08;
+window.addEventListener("load", function () {
+    document.querySelector(".europe").addEventListener("click", function () { emission(europa, europa18, europa08); });
+    document.querySelector(".northamerica").addEventListener("click", function () { emission(nordamerika, nordamerika18, nordamerika08); });
+    document.querySelector(".southamerica").addEventListener("click", function () { emission(südamerika, südamerika18, südamerika08); });
+    document.querySelector(".africa").addEventListener("click", function () { emission(afrika, afrika18, afrika08); });
+    document.querySelector(".asia").addEventListener("click", function () { emission(asien, asien18, asien08); });
+    document.querySelector(".northamerica").addEventListener("click", function () { emission(nordamerika, nordamerika18, nordamerika08); });
+    function emission(continentName, emission18, emission08) {
+        document.querySelector(".titleRegion").innerHTML = continentName;
+        document.querySelector(".gesamtEmission18").innerHTML = emission18.toString();
+    }
+    ;
+});
+//# sourceMappingURL=script.js.map
