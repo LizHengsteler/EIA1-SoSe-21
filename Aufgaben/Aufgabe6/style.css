@@ -38,3 +38,53 @@ footer p {
     font-size: 10px;
     opacity: .5;
 }
+
+
+
+.europe {
+    opacity: 70%;
+}
+
+.europe:hover {
+    opacity: 100%;
+}
+
+.northamerica {
+    opacity: 70%;
+}
+
+.northamerica:hover {
+    opacity: 100%;
+}
+
+.southamerica {
+    opacity: 70%;
+}
+
+.southamerica:hover {
+    opacity: 100%;
+}
+
+.asia {
+    opacity: 70%;
+} 
+
+.asia:hover {
+    opacity: 100%;
+}
+
+.australia {
+    opacity: 70%;
+}
+
+.australia:hover {
+    opacity: 100%;
+}
+
+.africa {
+    opacity: 70%;
+}
+
+.africa:hover {
+    opacity: 100%;
+}
