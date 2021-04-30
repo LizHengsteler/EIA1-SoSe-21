@@ -41,50 +41,15 @@ footer p {
 
 
 
-.europe {
+.picture {
     opacity: 70%;
+    transition-duration: 0.5s;
 }
 
-.europe:hover {
+.picture:hover {
     opacity: 100%;
 }
 
-.northamerica {
-    opacity: 70%;
-}
 
-.northamerica:hover {
-    opacity: 100%;
-}
 
-.southamerica {
-    opacity: 70%;
-}
 
-.southamerica:hover {
-    opacity: 100%;
-}
-
-.asia {
-    opacity: 70%;
-} 
-
-.asia:hover {
-    opacity: 100%;
-}
-
-.australia {
-    opacity: 70%;
-}
-
-.australia:hover {
-    opacity: 100%;
-}
-
-.africa {
-    opacity: 70%;
-}
-
-.africa:hover {
-    opacity: 100%;
-}

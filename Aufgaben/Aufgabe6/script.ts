@@ -36,9 +36,12 @@ window.addEventListener("load", function() {
     function emission (continentName : string, emission18 : number, emission08 : number) {
         document.querySelector (".continent").innerHTML = continentName;
         document.querySelector (".emissions18").innerHTML = emission18.toString();
+        document.querySelector (".continentName").innerHTML = continentName;
         document.querySelector(".relativeWorld").innerHTML = Math.round(emission18 / world * 100 * 100) / 100 + "%";
         document.querySelector(".growthRate").innerHTML = Math.round((emission18 - emission08) / emission08 * 100 * 100 / 100) + "%";
-        document.querySelector(".growthRateAbsolute").innerHTML = (Math.round((emission18 - emission08) * 100) / 100); 
+        document.querySelector(".growthRateAbsolute").innerHTML = (Math.round((emission18 - emission08) * 100) / 100).toString(); 
+        document.querySelector(".chart").setAttribute("style", "height:" + (emission18 / world) * 100 + "%");
+        
     };
     
 
