@@ -42,6 +42,7 @@ window.addEventListener("load", function() {
         document.querySelector(".growthRateAbsolute").innerHTML = (Math.round((emission18 - emission08) * 100) / 100).toString(); 
         document.querySelector(".chart").setAttribute("style", "height:" + (emission18 / world) * 100 + "%");
         
+        
     };
     
 
