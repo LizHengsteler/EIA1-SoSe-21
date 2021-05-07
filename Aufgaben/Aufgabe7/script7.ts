@@ -22,9 +22,13 @@ window.addEventListener("load", function(){
             
     };
 
+
+    document.querySelector(".play").addEventListener("click" ,  function() {playbutton
+    })
     var sounds: HTMLAudioElement[] = [new Audio ("sounds/kick.mp3"), new Audio ("sounds/hihat.mp3"), new Audio ("sounds/snare.mp3"),]
     sounds.play();
     var sounds = 0;
+
     setInterval(function() playbutton { 
 
         sounds = sounds + 1;

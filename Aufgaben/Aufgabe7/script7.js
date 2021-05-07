@@ -13,6 +13,9 @@ window.addEventListener("load", function () {
         sound.play();
     }
     ;
+    document.querySelector(".play").addEventListener("click", function () {
+        playbutton;
+    });
     var sounds = [new Audio("sounds/kick.mp3"), new Audio("sounds/hihat.mp3"), new Audio("sounds/snare.mp3"),];
     sounds.play();
     var sounds = 0;
