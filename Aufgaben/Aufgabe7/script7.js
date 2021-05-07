@@ -13,16 +13,39 @@ window.addEventListener("load", function () {
         sound.play();
     }
     ;
-    document.querySelector(".play").addEventListener("click", function () {
-        playbutton;
-    });
     var sounds = [new Audio("sounds/kick.mp3"), new Audio("sounds/hihat.mp3"), new Audio("sounds/snare.mp3"),];
-    sounds.play();
-    var sounds = 0;
-    setInterval(function () { }, playbutton, {
-        sounds: sounds,
-        console: console,
-        : .log(sounds)
-    }, 500);
+    function intervall() {
+        setInterval(function () {
+            sounds[1].play();
+        }, 3000);
+        setTimeout(function () {
+            sounds[0].play();
+        }, 500);
+        setTimeout(function () {
+            sounds[1].play();
+        }, 1000);
+        setTimeout(function () {
+            sounds[2].play();
+        }, 1500);
+        setTimeout(function () {
+            sounds[1].play();
+        }, 2000);
+        setTimeout(function () {
+            sounds[0].play();
+        }, 2500);
+        setTimeout(function () {
+            sounds[1].play();
+        }, 3000);
+        setTimeout(function () {
+            sounds[2].play();
+        }, 3500);
+        setTimeout(function () {
+            sounds[1].play();
+        }, 4000);
+    }
+    ;
+    document.querySelector(".play").addEventListener("click", function () {
+        intervall();
+    });
 });
 //# sourceMappingURL=script7.js.map
