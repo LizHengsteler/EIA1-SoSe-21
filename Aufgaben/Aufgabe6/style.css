@@ -182,6 +182,7 @@ footer p {
 .picture {
   opacity: 70%;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .picture:hover {

@@ -13,11 +13,8 @@ window.addEventListener("load", function () {
         sound.play();
     }
     ;
-    var sounds = [new Audio("sounds/kick.mp3"), new Audio("sounds/hihat.mp3"), new Audio("sounds/snare.mp3"),];
+    var sounds = [new Audio("sounds/kick.mp3"), new Audio("sounds/hihat.mp3"), new Audio("sounds/snare.mp3"), new Audio("sounds/A.mp3"), new Audio("sounds/C.mp3"), new Audio("sounds/F.mp3"), new Audio("sounds/G.mp3"), new Audio("sounds/laugh-1.mp3"), new Audio("sounds/laugh-2.mp3")];
     function intervall() {
-        setInterval(function () {
-            sounds[1].play();
-        }, 3000);
         setTimeout(function () {
             sounds[0].play();
         }, 500);

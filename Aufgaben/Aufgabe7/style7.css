@@ -1,5 +1,5 @@
 body {
-    background-color: lavender;
+    background-color: #e6e6fa;
     display: block;
     
 
@@ -20,6 +20,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 20px;
+    cursor: pointer;
 }
 .button1:hover {
     transform: scale(1.03)
@@ -30,6 +31,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 20px;   
+    cursor: pointer;
 }
 .button2:hover {
     transform: scale(1.03)
@@ -41,6 +43,7 @@ body {
     height: 150px;
     width: 150px; 
     border-radius: 20px;
+    cursor: pointer;
    
 }
 .button3:hover {
@@ -52,6 +55,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 20px;
+    cursor: pointer;
 }  
 
 .button4:hover {
@@ -63,6 +67,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 20px;
+    cursor: pointer;
 }  
 .button5:hover {
     transform: scale(1.03)
@@ -73,7 +78,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 20px;
-    
+    cursor: pointer;
 }
 .button6:hover {
     transform: scale(1.03)
@@ -85,7 +90,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 20px;
-    
+    cursor: pointer;
 }
 .button7:hover {
     transform: scale(1.03)
@@ -97,7 +102,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 20px;
-    
+    cursor: pointer;
 }
 .button8:hover {
     transform: scale(1.03)
@@ -109,6 +114,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 20px;
+    cursor: pointer;
     
    
 }
@@ -121,6 +127,7 @@ body {
     top: 550px;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
     
 }
 .play:hover {
