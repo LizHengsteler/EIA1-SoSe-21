@@ -46,8 +46,13 @@ window.addEventListener("load", function () {
         intervall();
     });
     
-    
+    function keyBoard(event) {
+        var keys = event.keyBoard;
+        if (keys == 49) {  
+          beats ("Sounds(kick.mp3") ;
+        };  
 
+    };
 
 
 
