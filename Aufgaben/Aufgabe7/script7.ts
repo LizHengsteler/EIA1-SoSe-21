@@ -1,14 +1,14 @@
 window.addEventListener("load", function () {
-    document.querySelector(".button1").addEventListener("click", function () { beats ("Sounds/kick.mp3"); });
-    document.querySelector(".button2").addEventListener("click", function () { beats("Sounds/hihat.mp3"); });
-    document.querySelector(".button3").addEventListener("click", function () { beats("Sounds/snare.mp3"); });
-    document.querySelector(".button4").addEventListener("click", function () { beats("Sounds/A.mp3"); });
-    document.querySelector(".button5").addEventListener("click", function () { beats("Sounds/C.mp3"); });
-    document.querySelector(".button6").addEventListener("click", function () { beats("Sounds/F.mp3"); });
-    document.querySelector(".button7").addEventListener("click", function () { beats("Sounds/G.mp3"); });
-    document.querySelector(".button8").addEventListener("click", function () { beats("Sounds/laugh-1.mp3"); });
-    document.querySelector(".button9").addEventListener("click", function () { beats("Sounds/laugh-2.mp3"); });
-    function beats(music) {
+    document.querySelector(".button1").addEventListener("click", function () { playSample ("sounds/kick.mp3"); });
+    document.querySelector(".button2").addEventListener("click", function () { playSample("sounds/hihat.mp3"); });
+    document.querySelector(".button3").addEventListener("click", function () { playSample("sounds/snare.mp3"); });
+    document.querySelector(".button4").addEventListener("click", function () { playSample("sounds/A.mp3"); });
+    document.querySelector(".button5").addEventListener("click", function () { playSample("sounds/C.mp3"); });
+    document.querySelector(".button6").addEventListener("click", function () { playSample("sounds/F.mp3"); });
+    document.querySelector(".button7").addEventListener("click", function () { playSample("sounds/G.mp3"); });
+    document.querySelector(".button8").addEventListener("click", function () { playSample("sounds/laugh-1.mp3"); });
+    document.querySelector(".button9").addEventListener("click", function () { playSample("sounds/laugh-2.mp3"); });
+    function playSample(music) {
         var sound = new Audio(music);
         sound.play();
     }
