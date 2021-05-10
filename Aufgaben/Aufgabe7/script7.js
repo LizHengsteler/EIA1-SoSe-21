@@ -44,13 +44,5 @@ window.addEventListener("load", function () {
     document.querySelector(".play").addEventListener("click", function () {
         intervall();
     });
-    function keyBoard(event) {
-        var keys = event.keyBoard;
-        if (keys == 49) {
-            beats("Sounds(kick.mp3");
-        }
-        ;
-    }
-    ;
 });
 //# sourceMappingURL=script7.js.map
