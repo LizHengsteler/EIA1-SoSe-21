@@ -19,8 +19,8 @@ window.addEventListener("load", function () {
     document.querySelector(".button8").addEventListener("click", function () { playSample(sounds[7].play()); });
     document.querySelector(".button9").addEventListener("click", function () { playSample(sounds[8].play()); });
     function playSample(music) {
-        var sounds = new Audio(music);
-        sounds.play();
+        var sample = new Audio(music);
+        sample.play();
     }
     ;
     function intervall() {
