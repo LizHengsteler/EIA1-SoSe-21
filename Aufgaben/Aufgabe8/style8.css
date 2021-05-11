@@ -1,0 +1,136 @@
+body {
+    background-color: #e6e6fa;
+    display: block;
+    
+
+    
+    
+    
+}
+#allButtons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    
+}
+
+.button1 {
+    background-color: #b6b976;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button1:hover {
+    transform: scale(1.03)
+}
+
+.button2 {
+    background-color: #b6b976;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;   
+    cursor: pointer;
+}
+.button2:hover {
+    transform: scale(1.03)
+}
+
+.button3 {
+    
+    background-color: #b6b976;
+    height: 150px;
+    width: 150px; 
+    border-radius: 20px;
+    cursor: pointer;
+   
+}
+.button3:hover {
+    transform: scale(1.03)
+}
+.button4 {
+    
+    background-color: #db9292;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+}  
+
+.button4:hover {
+    transform: scale(1.03)
+}
+.button5 {
+    
+    background-color: #db9292;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+}  
+.button5:hover {
+    transform: scale(1.03)
+} 
+.button6 {
+    
+    background-color: #db9292;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button6:hover {
+    transform: scale(1.03)
+}
+
+.button7 {
+    
+    background-color: #db9292;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button7:hover {
+    transform: scale(1.03)
+}
+
+.button8 {
+    
+    background-color: #c68ec7;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.button8:hover {
+    transform: scale(1.03)
+}
+
+.button9 {
+    
+    background-color: #c68ec7;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+    
+   
+}
+.button9:hover {
+    transform: scale(1.03)
+}
+
+.play {
+    position: absolute;
+    top: 550px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    
+}
+.play:hover {
+    height: 200px;
+    width: 200px;
+}
