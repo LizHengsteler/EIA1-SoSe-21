@@ -1,66 +1,51 @@
-window.addEventListener("load", function () {
-    var sounds = [];
-                sounds[0] = new Audio("../Aufgabe7/Sounds/kick.mp3");
-                sounds[1] = new Audio("../Aufgabe7/Sounds/hihat.mp3");
-                sounds[2] = new Audio("../Aufgabe7/Sounds/snare.mp3");
-                sounds[3] = new Audio("../Aufgabe7/Sounds/A.mp3");
-                sounds[4] = new Audio("../Aufgabe7/Sounds/C.mp3");
-                sounds[5] = new Audio("../Aufgabe7/Sounds/F.mp3");
-                sounds[6] = new Audio("../Aufgabe7/Sounds/G.mp3");
-                sounds[7] = new Audio("../Aufgabe7/Sounds/laugh-1.mp3");
-                sounds[8] = new Audio("../Aufgabe7/Sounds/laugh-2.mp3");
+namespace Aufgabe8 {
+  window.addEventListener("load", function (): void {
+    var sounds: HTMLAudioElement[] = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/A.mp3"), new Audio("../Aufgabe7/Sounds/C.mp3"), new Audio("../Aufgabe7/Sounds/F.mp3"), new Audio("../Aufgabe7/Sounds/G.mp3"), new Audio("../Aufgabe7/Sounds/laugh-1.mp3"), new Audio("../Aufgabe7/Sounds/laugh-2.mp3")];
+    var index: number = 0;
+    document.querySelector(".button1").addEventListener("click", function (): void { playSample(sounds[0]); });
+    document.querySelector(".button2").addEventListener("click", function (): void { playSample(sounds[1]); });
+    document.querySelector(".button3").addEventListener("click", function (): void { playSample(sounds[2]); });
+    document.querySelector(".button4").addEventListener("click", function (): void { playSample(sounds[3]); });
+    document.querySelector(".button5").addEventListener("click", function (): void { playSample(sounds[4]); });
+    document.querySelector(".button6").addEventListener("click", function (): void { playSample(sounds[5]); });
+    document.querySelector(".button7").addEventListener("click", function (): void { playSample(sounds[6]); });
+    document.querySelector(".button8").addEventListener("click", function (): void { playSample(sounds[7]); });
+    document.querySelector(".button9").addEventListener("click", function (): void { playSample(sounds[8]); });
+    function playSample(music: HTMLAudioElement= new Audio): void { 
+      music.play(); }
+      
+    document.querySelector("#buttonPlay").addEventListener("click", function () {
+          setInterval(function (): void {
+              sounds[index].play();
+              index += 1;
+              if (index > 2)
+                  index = 0;
+          },          300);
+      });
+ 
+    
+  
+    if (document.getElementById ("buttonPlay")) {
+        
+      
+    document.getElementById("buttonPlay").addEventListener("click", function (): void {
+        document.getElementById("buttonPlay").classList.add("hidden");
+        document.getElementById("buttonPause").classList.remove("hidden");
+      });
+      }
 
-                document.querySelector(".button1").addEventListener("click", function () { playSample(sounds [0].play()); });
-                document.querySelector(".button2").addEventListener("click", function () { playSample(sounds [1].play()); });
-                document.querySelector(".button3").addEventListener("click", function () { playSample(sounds [2].play()); });
-                document.querySelector(".button4").addEventListener("click", function () { playSample(sounds [3].play()); });
-                document.querySelector(".button5").addEventListener("click", function () { playSample(sounds [4].play()); });
-                document.querySelector(".button6").addEventListener("click", function () { playSample(sounds [5].play()); });
-                document.querySelector(".button7").addEventListener("click", function () { playSample(sounds [6].play()); });
-                document.querySelector(".button8").addEventListener("click", function () { playSample(sounds [7].play()); });
-                document.querySelector(".button9").addEventListener("click", function () { playSample(sounds [8].play()); });
-                function playSample(music) {
-                    var sample = new Audio(music);
-                    sample.play();
-                }
-                ;
-                
-                function intervall() {
-                    
-                    setTimeout(function () {
-                        sounds[0].play();
-                    }, 500);
-                    setTimeout(function () {
-                        sounds[1].play();
-                    }, 1000);
-                    setTimeout(function () {
-                        sounds[2].play();
-                    }, 1500);
-                    setTimeout(function () {
-                        sounds[1].play();
-                    }, 2000);
-                    setTimeout(function () {
-                        sounds[0].play();
-                    }, 2500);
-                    setTimeout(function () {
-                        sounds[1].play();
-                    }, 3000);
-                    setTimeout(function () {
-                        sounds[2].play();
-                    }, 3500);
-                    setTimeout(function () {
-                        sounds[1].play();
-                    }, 4000);
-                }
-                ;
-                document.querySelector(".play").addEventListener("click", function () {
-                    intervall();
-                });
-                
-               
-            
-                
-            
-            
-            
-            });
+    document.getElementById("buttonPause").addEventListener("click", function (): void {
+        document.getElementById("buttonPause").classList.add("hidden");
+        document.getElementById("buttonPlay").classList.remove("hidden");
+      });
+
+   
+
+    
+
+    
+  
+
+      
+  });
+}

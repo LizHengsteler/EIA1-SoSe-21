@@ -9,20 +9,37 @@ window.addEventListener("load", function () {
     sounds[6] = new Audio("Sounds/G.mp3");
     sounds[7] = new Audio("Sounds/laugh-1.mp3");
     sounds[8] = new Audio("Sounds/laugh-2.mp3");
-    document.querySelector(".button1").addEventListener("click", function () { playSample(sounds[0].play()); });
-    document.querySelector(".button2").addEventListener("click", function () { playSample(sounds[1].play()); });
-    document.querySelector(".button3").addEventListener("click", function () { playSample(sounds[2].play()); });
-    document.querySelector(".button4").addEventListener("click", function () { playSample(sounds[3].play()); });
-    document.querySelector(".button5").addEventListener("click", function () { playSample(sounds[4].play()); });
-    document.querySelector(".button6").addEventListener("click", function () { playSample(sounds[5].play()); });
-    document.querySelector(".button7").addEventListener("click", function () { playSample(sounds[6].play()); });
-    document.querySelector(".button8").addEventListener("click", function () { playSample(sounds[7].play()); });
-    document.querySelector(".button9").addEventListener("click", function () { playSample(sounds[8].play()); });
+    document.querySelector(".button1").addEventListener("click", function () {
+        playSample(sounds[0].play());
+    });
+    document.querySelector(".button2").addEventListener("click", function () {
+        playSample(sounds[1].play());
+    });
+    document.querySelector(".button3").addEventListener("click", function () {
+        playSample(sounds[2].play());
+    });
+    document.querySelector(".button4").addEventListener("click", function () {
+        playSample(sounds[3].play());
+    });
+    document.querySelector(".button5").addEventListener("click", function () {
+        playSample(sounds[4].play());
+    });
+    document.querySelector(".button6").addEventListener("click", function () {
+        playSample(sounds[5].play());
+    });
+    document.querySelector(".button7").addEventListener("click", function () {
+        playSample(sounds[6].play());
+    });
+    document.querySelector(".button8").addEventListener("click", function () {
+        playSample(sounds[7].play());
+    });
+    document.querySelector(".button9").addEventListener("click", function () {
+        playSample(sounds[8].play());
+    });
     function playSample(music) {
         var sample = new Audio(music);
         sample.play();
     }
-    ;
     function intervall() {
         setTimeout(function () {
             sounds[0].play();
@@ -49,7 +66,6 @@ window.addEventListener("load", function () {
             sounds[1].play();
         }, 4000);
     }
-    ;
     document.querySelector(".play").addEventListener("click", function () {
         intervall();
     });

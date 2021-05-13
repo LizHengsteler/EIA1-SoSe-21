@@ -9,7 +9,7 @@ body {
 }
 #allButtons{
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50% , -50%);
     
@@ -122,15 +122,51 @@ body {
     transform: scale(1.03)
 }
 
-.play {
+
+#buttonPlay {
     position: absolute;
-    top: 550px;
-    left: 50%;
+    color: #f6fae6;
+    font-size: 100px;
     transform: translate(-50%, -50%);
+    right: 130px;
+    top: 550px;
     cursor: pointer;
-    
+    opacity: 70%;
 }
-.play:hover {
-    height: 200px;
-    width: 200px;
+
+#buttonPlay:hover {
+    opacity: 100%;
+}
+
+#buttonPause {
+    position: absolute;
+    color: #f6fae6;
+    font-size: 100px;
+    transform: translate(-50%, -50%);
+    right: 130px;
+    top: 550px;
+    cursor: pointer;
+    opacity: 70%;
+}
+#buttonPause:hover {
+    opacity: 100%;
+}
+
+.hidden {
+    display: none !important;
+
+}
+#buttonTrash {
+    position: absolute;
+    color: #f6fae6;
+    font-size: 100px;
+    transform: translate(-50%, -50%);
+    right: -10px;
+    top: 550px;
+    cursor: pointer;
+    opacity: 70%;
+}
+
+#buttonTrash:hover {
+    opacity: 100%;
 }
