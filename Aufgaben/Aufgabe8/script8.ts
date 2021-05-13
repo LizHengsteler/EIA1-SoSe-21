@@ -25,22 +25,30 @@ namespace Aufgabe8 {
               });
           },                             300);
       });
- 
+
+   
     
-  
-    if (document.getElementById ("buttonPlay")) {
         
       
     document.getElementById("buttonPlay").addEventListener("click", function (): void {
         document.getElementById("buttonPlay").classList.add("hidden");
         document.getElementById("buttonPause").classList.remove("hidden");
       });
-      }
-
+      
+    
     document.getElementById("buttonPause").addEventListener("click", function (): void {
         document.getElementById("buttonPause").classList.add("hidden");
         document.getElementById("buttonPlay").classList.remove("hidden");
       });
+      
+    document.getElementById("buttonTrash").addEventListener("click", function(): void {
+        sounds.length = 0;
+      } );
+      
+
+   
+
+ 
 
    
 
@@ -49,5 +57,5 @@ namespace Aufgabe8 {
   
 
       
-  });
+  
 }

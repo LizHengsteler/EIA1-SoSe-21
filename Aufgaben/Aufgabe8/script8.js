@@ -27,15 +27,16 @@ var Aufgabe8;
                 });
             }, 300);
         });
-        if (document.getElementById("buttonPlay")) {
-            document.getElementById("buttonPlay").addEventListener("click", function () {
-                document.getElementById("buttonPlay").classList.add("hidden");
-                document.getElementById("buttonPause").classList.remove("hidden");
-            });
-        }
+        document.getElementById("buttonPlay").addEventListener("click", function () {
+            document.getElementById("buttonPlay").classList.add("hidden");
+            document.getElementById("buttonPause").classList.remove("hidden");
+        });
         document.getElementById("buttonPause").addEventListener("click", function () {
             document.getElementById("buttonPause").classList.add("hidden");
             document.getElementById("buttonPlay").classList.remove("hidden");
+        });
+        document.getElementById("buttonTrash").addEventListener("click", function () {
+            sounds.length = 0;
         });
     });
 })(Aufgabe8 || (Aufgabe8 = {}));
