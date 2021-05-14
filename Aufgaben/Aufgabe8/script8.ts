@@ -45,6 +45,20 @@ namespace Aufgabe8 {
         sounds.length = 0;
       } );
       
+    
+    var min: HTMLAudioElement = sounds[0];
+    var max: HTMLAudioElement = sounds[9];
+    var remixZahl: number = (Math.random();
+    console.log(remixZahl)
+    
+    
+
+    document.getElementById("buttonRandom").addEventListener("click", function (): void {playSample(remixZahl); });
+      
+
+
+
+    });
 
    
 
