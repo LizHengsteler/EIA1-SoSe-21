@@ -46,14 +46,19 @@ namespace Aufgabe8 {
       } );
       
     
-    var min: HTMLAudioElement = sounds[0];
-    var max: HTMLAudioElement = sounds[9];
-    var remixZahl: number = (Math.random();
-    console.log(remixZahl)
-    
+    var min: number = 0;
+    var max: number = 9;
+
+
     
 
-    document.getElementById("buttonRandom").addEventListener("click", function (): void {playSample(remixZahl); });
+    document.getElementById("buttonRandom").addEventListener("click", function (): void {
+
+      for (var remixZahl: number = Math.round((Math.random() * (max - min)) + min); remixZahl < sounds.length; remixZahl++) {
+        var remix: HTMLAudioElement = remixZahl;
+        
+      }
+      console.log(remix);
       
 
 
