@@ -1,0 +1,12 @@
+body {
+    display: block;
+}
+
+a {
+    background-color: cornflowerblue;
+    color: black;
+    border-radius: 18px;
+    
+    text-decoration: none;
+    padding: 5px;
+}

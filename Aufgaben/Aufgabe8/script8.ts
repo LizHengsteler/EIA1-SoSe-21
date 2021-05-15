@@ -16,13 +16,13 @@ namespace Aufgabe8 {
       
      }
       
-    document.querySelector("#buttonPlay").addEventListener("click", function () {
+    document.querySelector("#buttonPlay").addEventListener("click", function (): void {
       var interval: number = setInterval(function (): void {
               sounds[index].play();
               index += 1;
               if (index > 3)
                   index = 0;
-              document.querySelector("#buttonPause").addEventListener("click", function () {
+              document.querySelector("#buttonPause").addEventListener("click", function (): void {
                 clearInterval(interval);
               });
           },                             300);
@@ -54,19 +54,37 @@ namespace Aufgabe8 {
 
 
     var remixBeat: number[] = [];
+    var indexRemix: number = 0;
     var min: number = 0;
     var max: number = 9;
+    
   
     for (let index: number = 0; index < sounds.length; index++) {
     
         var zufallsZahl: number = Math.round((Math.random() * (max - min)) + min);
-        console.log(zufallsZahl);
+
         remixBeat.push(zufallsZahl);
       }
     function remixButton (remix: HTMLAudioElement= new Audio): void {
       remix.play();
       }
-    document.getElementById("buttonRandom").addEventListener("click", function (): void { remixButton(sounds[remixBeat]); });
+    
+    document.getElementById("buttonRandom").addEventListener("click", function (): void { 
+      var intervalRemix: number = setInterval(function (): void {
+        sounds[indexRemix].play();
+        indexRemix += 1;
+        if (indexRemix > 9)
+        indexRemix = 0;
+        
+        
+        
+      }
+
+       
+     
+    
+
+    
 
 
       });

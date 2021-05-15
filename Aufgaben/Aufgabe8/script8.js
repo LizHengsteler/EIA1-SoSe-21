@@ -39,18 +39,25 @@ var Aufgabe8;
             sounds.length = 0;
         });
         var remixBeat = [];
+        var indexRemix = 0;
         var min = 0;
         var max = 9;
         for (var index_1 = 0; index_1 < sounds.length; index_1++) {
             var zufallsZahl = Math.round((Math.random() * (max - min)) + min);
-            console.log(zufallsZahl);
             remixBeat.push(zufallsZahl);
         }
         function remixButton(remix) {
             if (remix === void 0) { remix = new Audio; }
             remix.play();
         }
-        document.getElementById("buttonRandom").addEventListener("click", function () { remixButton(sounds[remixBeat]); });
+        document.getElementById("buttonRandom").addEventListener("click", function () {
+            var intervalRemix = setInterval(function () {
+                sounds[indexRemix].play();
+                indexRemix += 1;
+                if (indexRemix > 9)
+                    indexRemix = 0;
+            });
+        });
     });
 })(Aufgabe8 || (Aufgabe8 = {}));
 //# sourceMappingURL=script8.js.map
