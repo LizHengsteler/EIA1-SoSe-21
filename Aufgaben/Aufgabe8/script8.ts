@@ -12,7 +12,9 @@ namespace Aufgabe8 {
     document.querySelector(".button8").addEventListener("click", function (): void { playSample(sounds[8]); });
     document.querySelector(".button9").addEventListener("click", function (): void { playSample(sounds[9]); });
     function playSample(music: HTMLAudioElement= new Audio): void { 
-      music.play(); }
+      music.play();
+      
+     }
       
     document.querySelector("#buttonPlay").addEventListener("click", function () {
       var interval: number = setInterval(function (): void {
@@ -45,25 +47,39 @@ namespace Aufgabe8 {
         sounds.length = 0;
       } );
       
+  
+   
+  
     
+
+
+    var remixBeat: number[] = [];
     var min: number = 0;
     var max: number = 9;
-
-
+  
+    for (let index: number = 0; index < sounds.length; index++) {
     
-
-    document.getElementById("buttonRandom").addEventListener("click", function (): void {
-
-      for (var remixZahl: number = Math.round((Math.random() * (max - min)) + min); remixZahl < sounds.length; remixZahl++) {
-        var remix: HTMLAudioElement = remixZahl;
-        
+        var zufallsZahl: number = Math.round((Math.random() * (max - min)) + min);
+        console.log(zufallsZahl);
+        remixBeat.push(zufallsZahl);
       }
-      console.log(remix);
+    function remixButton (remix: HTMLAudioElement= new Audio): void {
+      remix.play();
+      }
+    document.getElementById("buttonRandom").addEventListener("click", function (): void { remixButton(sounds[remixBeat]); });
+
+
+      });
+
+      
+
+      
+      
       
 
 
 
-    });
+    }
 
    
 
@@ -77,4 +93,4 @@ namespace Aufgabe8 {
 
       
   
-}
+

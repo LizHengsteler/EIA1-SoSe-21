@@ -38,14 +38,19 @@ var Aufgabe8;
         document.getElementById("buttonTrash").addEventListener("click", function () {
             sounds.length = 0;
         });
+        var remixBeat = [];
         var min = 0;
         var max = 9;
-        document.getElementById("buttonRandom").addEventListener("click", function () {
-            for (var remixZahl = Math.round((Math.random() * (max - min)) + min); remixZahl < sounds.length; remixZahl++) {
-                var remix = remixZahl;
-            }
-            console.log(remix);
-        });
+        for (var index_1 = 0; index_1 < sounds.length; index_1++) {
+            var zufallsZahl = Math.round((Math.random() * (max - min)) + min);
+            console.log(zufallsZahl);
+            remixBeat.push(zufallsZahl);
+        }
+        function remixButton(remix) {
+            if (remix === void 0) { remix = new Audio; }
+            remix.play();
+        }
+        document.getElementById("buttonRandom").addEventListener("click", function () { remixButton(sounds[remixBeat]); });
     });
 })(Aufgabe8 || (Aufgabe8 = {}));
 //# sourceMappingURL=script8.js.map
