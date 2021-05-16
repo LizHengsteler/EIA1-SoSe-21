@@ -1,6 +1,7 @@
 namespace Aufgabe8 {
   window.addEventListener("load", function (): void {
-    var sounds: HTMLAudioElement[] = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3") new Audio("../Aufgabe7/Sounds/A.mp3"), new Audio("../Aufgabe7/Sounds/C.mp3"), new Audio("../Aufgabe7/Sounds/F.mp3"), new Audio("../Aufgabe7/Sounds/G.mp3"), new Audio("../Aufgabe7/Sounds/laugh-1.mp3"), new Audio("../Aufgabe7/Sounds/laugh-2.mp3")];
+    var sounds: HTMLAudioElement[] = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/A.mp3"), new Audio("../Aufgabe7/Sounds/C.mp3"), new Audio("../Aufgabe7/Sounds/F.mp3"), new Audio("../Aufgabe7/Sounds/G.mp3"), new Audio("../Aufgabe7/Sounds/laugh-1.mp3"), new Audio("../Aufgabe7/Sounds/laugh-2.mp3")];
+    var beats: HTMLAudioElement[] = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3")];
     var index: number = 0;
     document.querySelector(".button1").addEventListener("click", function (): void { playSample(sounds[0]); });
     document.querySelector(".button2").addEventListener("click", function (): void { playSample(sounds[1]); });
@@ -18,7 +19,7 @@ namespace Aufgabe8 {
       
     document.querySelector("#buttonPlay").addEventListener("click", function (): void {
       var interval: number = setInterval(function (): void {
-              sounds[index].play();
+              beats[index].play();
               index += 1;
               if (index > 3)
                   index = 0;
@@ -44,60 +45,50 @@ namespace Aufgabe8 {
       });
       
     document.getElementById("buttonTrash").addEventListener("click", function(): void {
-        sounds.length = 0;
+        beats.length = 0;
       } );
-      
-  
-   
-  
+
     
-
-
-    var remixBeat: number[] = [];
-    var indexRemix: number = 0;
+   
     var min: number = 0;
     var max: number = 9;
+
+
+    document.getElementById("buttonRandom").addEventListener("click", function (): void { remixButton(); });
+    function remixButton() {
+      
+        
+        for (var i = 0; i <= 9; i++) {
+          var zufallsZahl: number = Math.round((Math.random() * (max - min)) + min);
+          sounds[i] = sounds[zufallsZahl];
+            
+        }
+        setInterval(function (): void {
+          sounds[index].play();
+          index += 1;
+          if (index > 9)
+              index = 0;
+
+      
+        },          300);
+      
+      
     
+
+      }
+    });
+      
   
-    for (let index: number = 0; index < sounds.length; index++) {
-    
-        var zufallsZahl: number = Math.round((Math.random() * (max - min)) + min);
-
-        remixBeat.push(zufallsZahl);
-      }
-    function remixButton (remix: HTMLAudioElement= new Audio): void {
-      remix.play();
-      }
-    
-    document.getElementById("buttonRandom").addEventListener("click", function (): void { 
-      var intervalRemix: number = setInterval(function (): void {
-        sounds[indexRemix].play();
-        indexRemix += 1;
-        if (indexRemix > 9)
-        indexRemix = 0;
-        
-        
-        
-      }
-
-       
-     
-    
-
-    
-
-
-      });
 
       
 
       
       
-      
+    } 
 
 
 
-    }
+   
 
    
 
@@ -111,4 +102,6 @@ namespace Aufgabe8 {
 
       
   
-
+  
+  })
+}

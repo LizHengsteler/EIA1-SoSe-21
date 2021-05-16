@@ -1,7 +1,8 @@
 var Aufgabe8;
 (function (Aufgabe8) {
     window.addEventListener("load", function () {
-        var sounds = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/A.mp3"), new Audio("../Aufgabe7/Sounds/C.mp3"), new Audio("../Aufgabe7/Sounds/F.mp3"), new Audio("../Aufgabe7/Sounds/G.mp3"), new Audio("../Aufgabe7/Sounds/laugh-1.mp3"), new Audio("../Aufgabe7/Sounds/laugh-2.mp3")];
+        var sounds = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/A.mp3"), new Audio("../Aufgabe7/Sounds/C.mp3"), new Audio("../Aufgabe7/Sounds/F.mp3"), new Audio("../Aufgabe7/Sounds/G.mp3"), new Audio("../Aufgabe7/Sounds/laugh-1.mp3"), new Audio("../Aufgabe7/Sounds/laugh-2.mp3")];
+        var beats = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3")];
         var index = 0;
         document.querySelector(".button1").addEventListener("click", function () { playSample(sounds[0]); });
         document.querySelector(".button2").addEventListener("click", function () { playSample(sounds[1]); });
@@ -18,7 +19,7 @@ var Aufgabe8;
         }
         document.querySelector("#buttonPlay").addEventListener("click", function () {
             var interval = setInterval(function () {
-                sounds[index].play();
+                beats[index].play();
                 index += 1;
                 if (index > 3)
                     index = 0;
@@ -36,28 +37,23 @@ var Aufgabe8;
             document.getElementById("buttonPlay").classList.remove("hidden");
         });
         document.getElementById("buttonTrash").addEventListener("click", function () {
-            sounds.length = 0;
+            beats.length = 0;
         });
-        var remixBeat = [];
-        var indexRemix = 0;
         var min = 0;
         var max = 9;
-        for (var index_1 = 0; index_1 < sounds.length; index_1++) {
-            var zufallsZahl = Math.round((Math.random() * (max - min)) + min);
-            remixBeat.push(zufallsZahl);
+        document.getElementById("buttonRandom").addEventListener("click", function () { remixButton(); });
+        function remixButton() {
+            for (var i = 0; i <= 9; i++) {
+                var zufallsZahl = Math.round((Math.random() * (max - min)) + min);
+                sounds[i] = sounds[zufallsZahl];
+            }
+            setInterval(function () {
+                sounds[index].play();
+                index += 1;
+                if (index > 9)
+                    index = 0;
+            }, 300);
         }
-        function remixButton(remix) {
-            if (remix === void 0) { remix = new Audio; }
-            remix.play();
-        }
-        document.getElementById("buttonRandom").addEventListener("click", function () {
-            var intervalRemix = setInterval(function () {
-                sounds[indexRemix].play();
-                indexRemix += 1;
-                if (indexRemix > 9)
-                    indexRemix = 0;
-            });
-        });
     });
 })(Aufgabe8 || (Aufgabe8 = {}));
 //# sourceMappingURL=script8.js.map
