@@ -1,6 +1,6 @@
 var Aufgabe8;
 (function (Aufgabe8) {
-    window.addEventListener("load", function () {
+    (window.addEventListener("load", function () {
         var sounds = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/A.mp3"), new Audio("../Aufgabe7/Sounds/C.mp3"), new Audio("../Aufgabe7/Sounds/F.mp3"), new Audio("../Aufgabe7/Sounds/G.mp3"), new Audio("../Aufgabe7/Sounds/laugh-1.mp3"), new Audio("../Aufgabe7/Sounds/laugh-2.mp3")];
         var beats = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3")];
         var index = 0;
@@ -54,6 +54,6 @@ var Aufgabe8;
                     index = 0;
             }, 300);
         }
-    });
+    }));
 })(Aufgabe8 || (Aufgabe8 = {}));
 //# sourceMappingURL=script8.js.map

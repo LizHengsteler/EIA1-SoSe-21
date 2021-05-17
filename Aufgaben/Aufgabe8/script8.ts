@@ -1,4 +1,4 @@
-namespace Aufgabe8 {
+namespace Aufgabe8 {(
   window.addEventListener("load", function (): void {
     var sounds: HTMLAudioElement[] = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/A.mp3"), new Audio("../Aufgabe7/Sounds/C.mp3"), new Audio("../Aufgabe7/Sounds/F.mp3"), new Audio("../Aufgabe7/Sounds/G.mp3"), new Audio("../Aufgabe7/Sounds/laugh-1.mp3"), new Audio("../Aufgabe7/Sounds/laugh-2.mp3")];
     var beats: HTMLAudioElement[] = [new Audio("../Aufgabe7/Sounds/kick.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3"), new Audio("../Aufgabe7/Sounds/snare.mp3"), new Audio("../Aufgabe7/Sounds/hihat.mp3")];
@@ -13,9 +13,7 @@ namespace Aufgabe8 {
     document.querySelector(".button8").addEventListener("click", function (): void { playSample(sounds[8]); });
     document.querySelector(".button9").addEventListener("click", function (): void { playSample(sounds[9]); });
     function playSample(music: HTMLAudioElement= new Audio): void { 
-      music.play();
-      
-     }
+      music.play(); }
       
     document.querySelector("#buttonPlay").addEventListener("click", function (): void {
       var interval: number = setInterval(function (): void {
@@ -55,10 +53,10 @@ namespace Aufgabe8 {
 
 
     document.getElementById("buttonRandom").addEventListener("click", function (): void { remixButton(); });
-    function remixButton() {
+    function remixButton(): void {
       
         
-        for (var i = 0; i <= 9; i++) {
+        for (var i: number = 0; i <= 9; i++) {
           var zufallsZahl: number = Math.round((Math.random() * (max - min)) + min);
           sounds[i] = sounds[zufallsZahl];
             
@@ -68,40 +66,15 @@ namespace Aufgabe8 {
           index += 1;
           if (index > 9)
               index = 0;
+          
 
       
-        },          300);
+        },                                  300);
       
-      
-    
 
       }
-    });
-      
-  
-
-      
-
-      
-      
-    } 
-
-
-
-   
-
-   
-
- 
-
-   
-
-
-    
-  
-
-      
-  
-  
-  })
+    })
+ );
 }
+
+
