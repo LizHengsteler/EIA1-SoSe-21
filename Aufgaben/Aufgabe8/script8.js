@@ -7,12 +7,12 @@ var Aufgabe8;
         document.querySelector(".button1").addEventListener("click", function () { playSample(sounds[0]); });
         document.querySelector(".button2").addEventListener("click", function () { playSample(sounds[1]); });
         document.querySelector(".button3").addEventListener("click", function () { playSample(sounds[2]); });
-        document.querySelector(".button4").addEventListener("click", function () { playSample(sounds[4]); });
-        document.querySelector(".button5").addEventListener("click", function () { playSample(sounds[5]); });
-        document.querySelector(".button6").addEventListener("click", function () { playSample(sounds[6]); });
-        document.querySelector(".button7").addEventListener("click", function () { playSample(sounds[7]); });
-        document.querySelector(".button8").addEventListener("click", function () { playSample(sounds[8]); });
-        document.querySelector(".button9").addEventListener("click", function () { playSample(sounds[9]); });
+        document.querySelector(".button4").addEventListener("click", function () { playSample(sounds[3]); });
+        document.querySelector(".button5").addEventListener("click", function () { playSample(sounds[4]); });
+        document.querySelector(".button6").addEventListener("click", function () { playSample(sounds[5]); });
+        document.querySelector(".button7").addEventListener("click", function () { playSample(sounds[6]); });
+        document.querySelector(".button8").addEventListener("click", function () { playSample(sounds[7]); });
+        document.querySelector(".button9").addEventListener("click", function () { playSample(sounds[8]); });
         function playSample(music) {
             if (music === void 0) { music = new Audio; }
             music.play();
@@ -40,17 +40,17 @@ var Aufgabe8;
             beats.length = 0;
         });
         var min = 0;
-        var max = 9;
+        var max = 8;
         document.getElementById("buttonRandom").addEventListener("click", function () { remixButton(); });
         function remixButton() {
-            for (var i = 0; i <= 9; i++) {
-                var zufallsZahl = Math.round((Math.random() * (max - min)) + min);
+            for (var i = 0; i <= 8; i++) {
+                var zufallsZahl = Math.floor((Math.random() * (max - min)) + min);
                 sounds[i] = sounds[zufallsZahl];
             }
             setInterval(function () {
                 sounds[index].play();
                 index += 1;
-                if (index > 9)
+                if (index > 8)
                     index = 0;
             }, 300);
         }

@@ -6,12 +6,12 @@ namespace Aufgabe8 {(
     document.querySelector(".button1").addEventListener("click", function (): void { playSample(sounds[0]); });
     document.querySelector(".button2").addEventListener("click", function (): void { playSample(sounds[1]); });
     document.querySelector(".button3").addEventListener("click", function (): void { playSample(sounds[2]); });
-    document.querySelector(".button4").addEventListener("click", function (): void { playSample(sounds[4]); });
-    document.querySelector(".button5").addEventListener("click", function (): void { playSample(sounds[5]); });
-    document.querySelector(".button6").addEventListener("click", function (): void { playSample(sounds[6]); });
-    document.querySelector(".button7").addEventListener("click", function (): void { playSample(sounds[7]); });
-    document.querySelector(".button8").addEventListener("click", function (): void { playSample(sounds[8]); });
-    document.querySelector(".button9").addEventListener("click", function (): void { playSample(sounds[9]); });
+    document.querySelector(".button4").addEventListener("click", function (): void { playSample(sounds[3]); });
+    document.querySelector(".button5").addEventListener("click", function (): void { playSample(sounds[4]); });
+    document.querySelector(".button6").addEventListener("click", function (): void { playSample(sounds[5]); });
+    document.querySelector(".button7").addEventListener("click", function (): void { playSample(sounds[6]); });
+    document.querySelector(".button8").addEventListener("click", function (): void { playSample(sounds[7]); });
+    document.querySelector(".button9").addEventListener("click", function (): void { playSample(sounds[8]); });
     function playSample(music: HTMLAudioElement= new Audio): void { 
       music.play(); }
       
@@ -49,27 +49,27 @@ namespace Aufgabe8 {(
     
    
     var min: number = 0;
-    var max: number = 9;
+    var max: number = 8;
 
 
     document.getElementById("buttonRandom").addEventListener("click", function (): void { remixButton(); });
     function remixButton(): void {
       
         
-        for (var i: number = 0; i <= 9; i++) {
-          var zufallsZahl: number = Math.round((Math.random() * (max - min)) + min);
+        for (var i: number = 0; i <= 8; i++) {
+          var zufallsZahl: number = Math.floor((Math.random() * (max - min)) + min);
           sounds[i] = sounds[zufallsZahl];
             
         }
         setInterval(function (): void {
           sounds[index].play();
           index += 1;
-          if (index > 9)
+          if (index > 8)
               index = 0;
           
 
       
-        },                                  300);
+        },          300);
       
 
       }
