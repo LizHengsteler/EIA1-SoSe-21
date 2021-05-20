@@ -1,9 +1,12 @@
 body {
     font-family: 'Arial Narrow Bold', sans-serif;
     text-align: center;
+    background-color: bisque
     
 }
 
 input {
-    background-color:;
+    
+    height: 20px;
+    width: 300px;
 }
