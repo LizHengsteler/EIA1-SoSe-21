@@ -1,28 +1,29 @@
 namespace Aufgabe9 {
     window.addEventListener("load", function(): void {
 
-        let trash: HTMLElement = document.getElementById("trash");
+        let trash: HTMLElement = document.querySelector(".fas fa-trash-alt");
         let add: HTMLElement = document.getElementById("add");
         let newContainer: HTMLElement = document.getElementById("toDoContainer");
         let inputField: HTMLInputElement = document.getElementById("textInput") as HTMLInputElement;
         let toDoList: HTMLElement = document.querySelector(".toDoList");
-
+        let arrow: HTMLElement = document.querySelector(".fa-arrow-circle-right");
+        
         interface ToDoItem {
             text: string;
             checked: boolean;
+            
         }
         
-        let aufgabenArray: ToDoItem [] = [
-        {
-            text: "Essen gehen",
-            checked: true
-    
+        let aufgabenArray: ToDoItem [] = [];
+        arrow.addEventListener("click", function (): void {
+            aufgabenArray.push({
+                text: inputField.value,
+                checked: false
 
-        }, {
-            text: "Zimmer aufräumen",
-            checked: false
-        }
-        ];
+            });
+            showToDo();
+        });
+
 
         inputField.addEventListener("keydown", function(event: KeyboardEvent): void {
             if  (event.key == "Enter") {
@@ -30,7 +31,10 @@ namespace Aufgabe9 {
                 aufgabenArray.push({
                     text: inputField.value,
                     checked: false
+
                 });
+            
+                
                 showToDo();
             }
            
@@ -40,7 +44,7 @@ namespace Aufgabe9 {
 
         function showToDo (): void {
             toDoList.innerHTML = "";
-
+            
             for (let index: number = 0; index < aufgabenArray.length; index++) {
                 let div: HTMLDivElement = document.createElement ("div");
                 div.textContent = aufgabenArray[index].text;

@@ -1,20 +1,20 @@
 var Aufgabe9;
 (function (Aufgabe9) {
     window.addEventListener("load", function () {
-        var trash = document.getElementById("trash");
+        var trash = document.querySelector(".fas fa-trash-alt");
         var add = document.getElementById("add");
         var newContainer = document.getElementById("toDoContainer");
         var inputField = document.getElementById("textInput");
         var toDoList = document.querySelector(".toDoList");
-        var aufgabenArray = [
-            {
-                text: "Essen gehen",
-                checked: true
-            }, {
-                text: "Zimmer aufräumen",
+        var arrow = document.querySelector(".fa-arrow-circle-right");
+        var aufgabenArray = [];
+        arrow.addEventListener("click", function () {
+            aufgabenArray.push({
+                text: inputField.value,
                 checked: false
-            }
-        ];
+            });
+            showToDo();
+        });
         inputField.addEventListener("keydown", function (event) {
             if (event.key == "Enter") {
                 event.preventDefault();
