@@ -1,12 +1,14 @@
 namespace Aufgabe9 {
     window.addEventListener("load", function(): void {
 
-        let trash: HTMLElement = document.querySelector(".fas fa-trash-alt");
+        
         let add: HTMLElement = document.getElementById("add");
         let newContainer: HTMLElement = document.getElementById("toDoContainer");
         let inputField: HTMLInputElement = document.getElementById("textInput") as HTMLInputElement;
         let toDoList: HTMLElement = document.querySelector(".toDoList");
         let arrow: HTMLElement = document.querySelector(".fa-arrow-circle-right");
+
+        
         
         interface ToDoItem {
             text: string;
@@ -50,8 +52,10 @@ namespace Aufgabe9 {
                 div.textContent = aufgabenArray[index].text;
                 toDoList.appendChild(div);
                 
-                
             }
+            let trash: HTMLElement = document.createElement("i");
+            trash.className = "fas fa-trash-alt";
+            
   
 
         }

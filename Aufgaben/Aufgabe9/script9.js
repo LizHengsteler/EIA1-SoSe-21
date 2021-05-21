@@ -1,7 +1,6 @@
 var Aufgabe9;
 (function (Aufgabe9) {
     window.addEventListener("load", function () {
-        var trash = document.querySelector(".fas fa-trash-alt");
         var add = document.getElementById("add");
         var newContainer = document.getElementById("toDoContainer");
         var inputField = document.getElementById("textInput");
@@ -32,6 +31,8 @@ var Aufgabe9;
                 div.textContent = aufgabenArray[index].text;
                 toDoList.appendChild(div);
             }
+            var trash = document.createElement("i");
+            trash.className = "fas fa-trash-alt";
         }
     });
 })(Aufgabe9 || (Aufgabe9 = {}));
