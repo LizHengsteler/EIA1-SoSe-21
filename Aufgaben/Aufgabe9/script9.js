@@ -5,24 +5,33 @@ var Aufgabe9;
         var add = document.getElementById("add");
         var newContainer = document.getElementById("toDoContainer");
         var inputField = document.getElementById("textInput");
-        add.addEventListener("click", function () {
-            var newParapraph = document.createElement("p");
-            newContainer.appendChild(newParapraph);
-        });
-        var aufgabenArray = [];
-        document.querySelector("#add").addEventListener("click", function () {
-            var todo = {
-                text: document.getElementById("textInput").value,
+        var toDoList = document.querySelector(".toDoList");
+        var aufgabenArray = [
+            {
+                text: "Essen gehen",
+                checked: true
+            }, {
+                text: "Zimmer aufräumen",
                 checked: false
-            };
-            aufgabenArray.push(todo);
-            for (var index = 0; index < aufgabenArray.length; index++) {
-                var toDoField = document.getElementById("empty");
-                var toDoContainer = document.createElement("div");
-                toDoContainer.textContent = aufgabenArray[index].text;
             }
-            console.log(aufgabenArray);
+        ];
+        inputField.addEventListener("keydown", function (event) {
+            if (event.keyCode == 13) {
+                aufgabenArray.push({
+                    text: inputField.value,
+                    checked: false
+                });
+            }
         });
+        addToDo();
+        function addToDo() {
+            toDoList.innerText = "";
+            for (var index = 0; index < aufgabenArray.length; index++) {
+                var div = document.createElement("div");
+                div.textContent = aufgabenArray[index].text;
+                document.body.appendChild(div);
+            }
+        }
     });
 })(Aufgabe9 || (Aufgabe9 = {}));
 //# sourceMappingURL=script9.js.map

@@ -1,3 +1,9 @@
+var toDoDiv = document.createElement("div");
+toDoDiv.classList.add("toDo");
+var newToDo = document.createElement("li");
+newToDo.innerText = "hello";
+newToDo.classList.add("toDoItem");
+toDoDiv.appendChild(newToDo);
 var neuesDiv = document.createElement("div");
 document.body.appendChild(toDoForm);
 toDoForm.textContent = "hallo";
@@ -48,4 +54,18 @@ var Aufgabe8;
         });
     });
 })(Aufgabe8 || (Aufgabe8 = {}));
+var aufgabenArray = [];
+document.querySelector("#add").addEventListener("click", function () {
+    var todo = {
+        text: document.getElementById("textInput").value,
+        checked: false
+    };
+    aufgabenArray.push(todo);
+    for (var index = 0; index < aufgabenArray.length; index++) {
+        var toDoField = document.getElementById("empty");
+        var toDoContainer = document.createElement("div");
+        toDoContainer.textContent = aufgabenArray[index].text;
+    }
+    console.log(aufgabenArray);
+});
 //# sourceMappingURL=ausgelagert.js.map
