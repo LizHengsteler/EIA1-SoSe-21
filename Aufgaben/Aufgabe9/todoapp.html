@@ -14,15 +14,32 @@
 
     <h3> <span class="taskCount"> task/s to do</span></h3>
 
-    <form id="toDoForm">
+    <form>
         <div class="toDoWrapper">
             <input type="checkbox" name="Checkbox" class="toDoCheckbox">
-            <input type="text" name="Textfeld" class="textInput">
-            <label for="checkbox"></label>
-            <i class="far fa-trash-alt"></i>
-            <i class="fas fa-arrow-right next"></i>
+            <input id="textInput" type="text" name="Textfeld">
+
+            <i id="trash" class="far fa-trash-alt"></i>
+             <i id="add" class="fas fa-plus"></i> 
+
+            </form>
+            <div class="toDoCOntainer">
+             <ul class="toDoList">
+                 <div class="toDo">
+                     <li></li>
+                    <i id="trash" class="far fa-trash-alt"></i>
+                    <i id="add" class="fas fa-plus"></i> 
+                </div>
+
+
+             </ul>
         </div>
-    </form>
+    
+    
+    </div>
+
+        
+   
 
 
     

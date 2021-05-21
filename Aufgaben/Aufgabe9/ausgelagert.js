@@ -11,4 +11,41 @@ toDoForm.addEventListener("keypress", function (event) {
     document.body.appendChild(neuesDiv);
     console.log(neuesDiv);
 });
+var aufgabenArray = [
+    {
+        checked: true,
+        text: "Hello"
+    }, {
+        checked: true,
+        text: "Eia"
+    }
+];
+document.querySelector(".next").addEventListener("click", function () {
+    for (var index = 0; index < aufgabenArray.length; index++) {
+        var div = document.createElement("div");
+        var inputValue = document.getElementsByClassName("textInput").value;
+        div.textContent = aufgabenArray[0].text;
+    }
+});
+var Aufgabe8;
+(function (Aufgabe8) {
+    window.addEventListener("load", function () {
+        var aufgabenArray = [
+            {
+                checked: true,
+                text: "Hello"
+            }, {
+                checked: true,
+                text: "Eia"
+            }
+        ];
+        document.querySelector(".next").addEventListener("click", function () {
+            for (var index = 0; index < aufgabenArray.length; index++) {
+                var div = document.createElement("div");
+                var inputValue = document.getElementsByClassName("textInput").value;
+                div.textContent = aufgabenArray[0].text;
+            }
+        });
+    });
+})(Aufgabe8 || (Aufgabe8 = {}));
 //# sourceMappingURL=ausgelagert.js.map

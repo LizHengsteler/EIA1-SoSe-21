@@ -1,21 +1,28 @@
-var Aufgabe8;
-(function (Aufgabe8) {
+var Aufgabe9;
+(function (Aufgabe9) {
     window.addEventListener("load", function () {
-        var neuesInput = document.createElement("input");
-        document.body.appendChild(toDoForm);
-        toDoForm.textContent = "hallo";
-        var toDoForm = document.querySelector(".textInput");
-        toDoForm.addEventListener("change", function () {
-            console.log(toDoForm.value);
+        var trash = document.getElementById("trash");
+        var add = document.getElementById("add");
+        var newContainer = document.getElementById("toDoContainer");
+        var inputField = document.getElementById("textInput");
+        add.addEventListener("click", function () {
+            var newParapraph = document.createElement("p");
+            newContainer.appendChild(newParapraph);
         });
-        document.querySelector("#buttonPlay").addEventListener("click", function () {
-            toDoForm.addEventListener("click", function () {
-                if (event.key == "Enter")
-                    var neuesDiv = document.createElement("div");
-                document.body.appendChild(neuesDiv);
-                console.log(neuesDiv);
-            });
+        var aufgabenArray = [];
+        document.querySelector("#add").addEventListener("click", function () {
+            var todo = {
+                text: document.getElementById("textInput").value,
+                checked: false
+            };
+            aufgabenArray.push(todo);
+            for (var index = 0; index < aufgabenArray.length; index++) {
+                var toDoField = document.getElementById("empty");
+                var toDoContainer = document.createElement("div");
+                toDoContainer.textContent = aufgabenArray[index].text;
+            }
+            console.log(aufgabenArray);
         });
     });
-})(Aufgabe8 || (Aufgabe8 = {}));
+})(Aufgabe9 || (Aufgabe9 = {}));
 //# sourceMappingURL=script9.js.map
