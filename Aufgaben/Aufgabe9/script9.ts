@@ -4,7 +4,7 @@ namespace Aufgabe9 {
         let trash: HTMLElement = document.getElementById("trash");
         let add: HTMLElement = document.getElementById("add");
         let newContainer: HTMLElement = document.getElementById("toDoContainer");
-        let inputField: HTMLElement = document.getElementById("textInput");
+        let inputField: HTMLInputElement = document.getElementById("textInput") as HTMLInputElement;
         let toDoList: HTMLElement = document.querySelector(".toDoList");
 
         interface ToDoItem {
@@ -25,36 +25,32 @@ namespace Aufgabe9 {
         ];
 
         inputField.addEventListener("keydown", function(event: KeyboardEvent): void {
-            if (event.keyCode == 13) {
+            if  (event.key == "Enter") {
+                event.preventDefault ();
                 aufgabenArray.push({
                     text: inputField.value,
                     checked: false
                 });
+                showToDo();
             }
            
         });
 
-        addToDo();
+        
 
-        function addToDo (): void {
-            toDoList.innerText = "";
+        function showToDo (): void {
+            toDoList.innerHTML = "";
 
             for (let index: number = 0; index < aufgabenArray.length; index++) {
                 let div: HTMLDivElement = document.createElement ("div");
                 div.textContent = aufgabenArray[index].text;
-                document.body.appendChild(div);
+                toDoList.appendChild(div);
                 
                 
             }
-
-
-            
+  
 
         }
-
-
-    
- 
 
 
 

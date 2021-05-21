@@ -1,23 +1,45 @@
-var toDoDiv = document.createElement("div");
-toDoDiv.classList.add("toDo");
-var newToDo = document.createElement("li");
-newToDo.innerText = "hello";
-newToDo.classList.add("toDoItem");
-toDoDiv.appendChild(newToDo);
-var neuesDiv = document.createElement("div");
-document.body.appendChild(toDoForm);
-toDoForm.textContent = "hallo";
-var toDoForm = document.querySelector(".textInput");
-toDoForm.addEventListener("change", function () {
-    console.log(toDoForm.value);
-});
-toDoForm.addEventListener("keypress", function (event) {
-    if (event.key == "Enter")
-        var neuesDiv = document.createElement("div");
-    document.body.appendChild(neuesDiv);
-    console.log(neuesDiv);
-});
-var aufgabenArray = [
+/*namespace Ausgelagert {
+    let toDoDiv: HTMLElement = document.createElement("div");
+    toDoDiv.classList.add("toDo");
+
+    let newToDo: HTMLElement = document.createElement("li");
+    newToDo.innerText = "hello";
+    newToDo.classList.add("toDoItem");
+    toDoDiv.appendChild(newToDo);
+ 
+ 
+ 
+ 
+ 
+    let neuesDiv: HTMLDivElement = document.createElement("div");
+    document.body.appendChild(toDoForm);
+    toDoForm.textContent = "hallo";
+    let toDoForm: HTMLInputElement =
+ document.querySelector(".textInput") as HTMLInputElement;
+
+    toDoForm.addEventListener("change", function (): void {
+     console.log(toDoForm.value);
+ });
+
+    toDoForm.addEventListener("keypress", function(event: KeyboardEvent): void {
+     if ((event as KeyboardEvent).key == "Enter")
+     var neuesDiv: HTMLDivElement = document.createElement("div");
+     document.body.appendChild(neuesDiv);
+     console.log(neuesDiv);
+
+
+     
+ });
+
+
+    interface ToDoItem {
+    checked: boolean;
+    text: string;
+
+}
+
+
+    let aufgabenArray: ToDoItem [] = [
     {
         checked: true,
         text: "Hello"
@@ -26,17 +48,34 @@ var aufgabenArray = [
         text: "Eia"
     }
 ];
-document.querySelector(".next").addEventListener("click", function () {
-    for (var index = 0; index < aufgabenArray.length; index++) {
-        var div = document.createElement("div");
-        var inputValue = document.getElementsByClassName("textInput").value;
+    document.querySelector(".next").addEventListener("click", function (): void {
+    for (let index: number = 0; index < aufgabenArray.length; index++) {
+        let div: HTMLDivElement =
+        document.createElement("div");
+        let inputValue: HTMLElement = document.getElementsByClassName("textInput").value;
         div.textContent = aufgabenArray[0].text;
+            
+
+    
     }
+
+
+    
 });
-var Aufgabe8;
-(function (Aufgabe8) {
-    window.addEventListener("load", function () {
-        var aufgabenArray = [
+
+
+
+    
+    window.addEventListener("load", function(): void {
+        
+                interface ToDoItem {
+            checked: boolean;
+            text: string;
+        
+        }
+        
+        
+                let aufgabenArray: ToDoItem [] = [
             {
                 checked: true,
                 text: "Hello"
@@ -45,27 +84,59 @@ var Aufgabe8;
                 text: "Eia"
             }
         ];
-        document.querySelector(".next").addEventListener("click", function () {
-            for (var index = 0; index < aufgabenArray.length; index++) {
-                var div = document.createElement("div");
-                var inputValue = document.getElementsByClassName("textInput").value;
+                document.querySelector(".next").addEventListener("click", function (): void {
+            for (let index: number = 0; index < aufgabenArray.length; index++) {
+                let div: HTMLDivElement =
+                document.createElement("div");
+                let inputValue: HTMLElement = document.getElementsByClassName("textInput").value;
                 div.textContent = aufgabenArray[0].text;
+                    
+        
+            
             }
+        
+        
+            
         });
+        
+        
+           
+            
+        
+
+
+
     });
-})(Aufgabe8 || (Aufgabe8 = {}));
-var aufgabenArray = [];
-document.querySelector("#add").addEventListener("click", function () {
-    var todo = {
-        text: document.getElementById("textInput").value,
+
+
+    interface ToDoItem {
+    text: string;
+    checked: boolean;
+}
+
+    let aufgabenArray: ToDoItem [] = [];
+
+    document.querySelector("#add").addEventListener("click", function (): void {
+    let todo: ToDoItem = {
+        text: (<HTMLInputElement>document.getElementById("textInput")).value,
         checked: false
     };
+
     aufgabenArray.push(todo);
-    for (var index = 0; index < aufgabenArray.length; index++) {
-        var toDoField = document.getElementById("empty");
-        var toDoContainer = document.createElement("div");
+
+
+    for (let index: number = 0; index < aufgabenArray.length; index++) {
+
+        let toDoField: HTMLElement = document.getElementById("empty");
+        let toDoContainer: HTMLElement = document.createElement("div");
         toDoContainer.textContent = aufgabenArray[index].text;
+        
+
+
+
+    
     }
     console.log(aufgabenArray);
-});
+}
+*/
 //# sourceMappingURL=ausgelagert.js.map

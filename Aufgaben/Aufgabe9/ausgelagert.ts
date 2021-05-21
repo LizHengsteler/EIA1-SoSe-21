@@ -1,26 +1,28 @@
-let toDoDiv: HTMLElement = document.createElement("div");
-toDoDiv.classList.add("toDo");
 
-let newToDo: HTMLElement = document.createElement("li");
-newToDo.innerText = "hello";
-newToDo.classList.add("toDoItem");
-toDoDiv.appendChild(newToDo);
+/*namespace Ausgelagert {
+    let toDoDiv: HTMLElement = document.createElement("div");
+    toDoDiv.classList.add("toDo");
+
+    let newToDo: HTMLElement = document.createElement("li");
+    newToDo.innerText = "hello";
+    newToDo.classList.add("toDoItem");
+    toDoDiv.appendChild(newToDo);
  
  
  
  
  
-let neuesDiv: HTMLDivElement = document.createElement("div"); 
-document.body.appendChild(toDoForm);
-toDoForm.textContent = "hallo";
-let toDoForm: HTMLInputElement = 
+    let neuesDiv: HTMLDivElement = document.createElement("div"); 
+    document.body.appendChild(toDoForm);
+    toDoForm.textContent = "hallo";
+    let toDoForm: HTMLInputElement = 
  document.querySelector(".textInput") as HTMLInputElement;
 
-toDoForm.addEventListener("change", function (): void {
+    toDoForm.addEventListener("change", function (): void {
      console.log(toDoForm.value);
  });
 
-toDoForm.addEventListener("keypress", function(event: KeyboardEvent): void {
+    toDoForm.addEventListener("keypress", function(event: KeyboardEvent): void {
      if ((event as KeyboardEvent).key == "Enter")
      var neuesDiv: HTMLDivElement = document.createElement("div"); 
      document.body.appendChild(neuesDiv);
@@ -31,14 +33,14 @@ toDoForm.addEventListener("keypress", function(event: KeyboardEvent): void {
  });
 
 
-interface ToDoItem {
+    interface ToDoItem {
     checked: boolean;
     text: string;
 
 }
 
 
-let aufgabenArray: ToDoItem [] = [
+    let aufgabenArray: ToDoItem [] = [
     {
         checked: true,
         text: "Hello"
@@ -47,7 +49,7 @@ let aufgabenArray: ToDoItem [] = [
         text: "Eia"
     }
 ];
-document.querySelector(".next").addEventListener("click", function (): void {
+    document.querySelector(".next").addEventListener("click", function (): void {
     for (let index: number = 0; index < aufgabenArray.length; index++) {
         let div: HTMLDivElement = 
         document.createElement("div");
@@ -64,7 +66,7 @@ document.querySelector(".next").addEventListener("click", function (): void {
 
 
 
-namespace Aufgabe8 {
+    
     window.addEventListener("load", function(): void {
         
                 interface ToDoItem {
@@ -106,16 +108,16 @@ namespace Aufgabe8 {
 
 
     });
-}
 
-interface ToDoItem {
+
+    interface ToDoItem {
     text: string;
     checked: boolean;
 }
 
-let aufgabenArray: ToDoItem [] = [];
+    let aufgabenArray: ToDoItem [] = [];
 
-document.querySelector("#add").addEventListener("click", function (): void {
+    document.querySelector("#add").addEventListener("click", function (): void {
     let todo: ToDoItem = {
         text: (<HTMLInputElement>document.getElementById("textInput")).value,
         checked: false
@@ -136,3 +138,5 @@ document.querySelector("#add").addEventListener("click", function (): void {
     
     }
     console.log(aufgabenArray);
+}
+*/

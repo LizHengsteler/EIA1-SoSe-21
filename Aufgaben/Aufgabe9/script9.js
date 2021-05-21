@@ -16,20 +16,21 @@ var Aufgabe9;
             }
         ];
         inputField.addEventListener("keydown", function (event) {
-            if (event.keyCode == 13) {
+            if (event.key == "Enter") {
+                event.preventDefault();
                 aufgabenArray.push({
                     text: inputField.value,
                     checked: false
                 });
+                showToDo();
             }
         });
-        addToDo();
-        function addToDo() {
-            toDoList.innerText = "";
+        function showToDo() {
+            toDoList.innerHTML = "";
             for (var index = 0; index < aufgabenArray.length; index++) {
                 var div = document.createElement("div");
                 div.textContent = aufgabenArray[index].text;
-                document.body.appendChild(div);
+                toDoList.appendChild(div);
             }
         }
     });
