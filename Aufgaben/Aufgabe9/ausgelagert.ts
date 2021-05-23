@@ -1,5 +1,14 @@
 
 /*namespace Ausgelagert {
+
+
+
+    // Div erstellen
+        let div: HTMLDivElement = document.createElement("div");
+        div.classList.add("toDoContainer");
+        toDoList.appendChild(div);
+
+        
     let toDoDiv: HTMLElement = document.createElement("div");
     toDoDiv.classList.add("toDo");
 

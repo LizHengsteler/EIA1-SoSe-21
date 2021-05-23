@@ -29,22 +29,23 @@ var Aufgabe9;
         });
         //Funktion, die ToDos ausgibt
         function showToDo() {
-            toDoList.innerHTML = "";
             for (var index = 0; index < aufgabenArray.length; index++) {
                 var toDoInput = aufgabenArray[index];
-                var div = document.createElement("div");
-                div.className = "toDoContainer";
-                toDoList.appendChild(div);
+                toDoList.innerHTML = "";
+                //Liste erstellen
                 var listElement = document.createElement("li");
                 listElement.classList.add("toDo");
                 toDoList.appendChild(listElement);
                 listElement.textContent = aufgabenArray[index].text;
+                //Icons
+                var trashIcon = document.createElement("i");
+                var trash = document.createAttribute("class");
+                trash.value = "far fa-trash-alt";
+                trashIcon.setAttributeNode(trash);
+                var checkbox = document.createElement("input");
+                checkbox.className = "checkbox";
             }
         }
-        var trash = document.createElement("i");
-        trash.className = "fas fa-trash-alt";
-        var checkbox = document.createElement("input");
-        checkbox.className = "checkbox";
     });
 })(Aufgabe9 || (Aufgabe9 = {}));
 //# sourceMappingURL=script9.js.map
