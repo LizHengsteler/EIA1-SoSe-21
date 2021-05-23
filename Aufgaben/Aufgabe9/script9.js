@@ -1,8 +1,6 @@
 var Aufgabe9;
 (function (Aufgabe9) {
     window.addEventListener("load", function () {
-        var add = document.getElementById("add");
-        var newContainer = document.getElementById("toDoContainer");
         var inputField = document.getElementById("textInput");
         var toDoList = document.querySelector(".toDoList");
         var arrow = document.querySelector(".fa-arrow-circle-right");
@@ -27,12 +25,15 @@ var Aufgabe9;
         function showToDo() {
             toDoList.innerHTML = "";
             for (var index = 0; index < aufgabenArray.length; index++) {
+                var toDoInput = aufgabenArray[index];
                 var div = document.createElement("div");
                 div.textContent = aufgabenArray[index].text;
                 toDoList.appendChild(div);
+                var trash = document.createElement("i");
+                trash.className = "fas fa-trash-alt";
+                var checkbox = document.createElement("input");
+                checkbox.className = "checkbox";
             }
-            var trash = document.createElement("i");
-            trash.className = "fas fa-trash-alt";
         }
     });
 })(Aufgabe9 || (Aufgabe9 = {}));

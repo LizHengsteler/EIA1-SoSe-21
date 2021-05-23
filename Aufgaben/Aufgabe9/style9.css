@@ -13,8 +13,17 @@ body {
     
 }
 
-#toDoContainer {
+.toDoContainer {
     height: 20px;
     width: 300px;
     margin-top: 25px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    
 }
+
+.checkbox {
+    height: 50px;
+}
+
