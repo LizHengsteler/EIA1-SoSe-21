@@ -39,17 +39,23 @@ namespace Aufgabe9 {
     );
 
     function showToDo(): void {
+
       toDoList.innerHTML = "";
+     
 
 
 
       for (let index: number = 0; index < aufgabenArray.length; index++) {
         const toDoInput: ToDoItem = aufgabenArray[index];
-        let div: HTMLDivElement = document.createElement ("div");
-        div.classList.add("toDo");
-        div.textContent = aufgabenArray[index].text;
-        toDoList.appendChild(div);
         
+        let div: HTMLDivElement = document.createElement("div");
+        div.className = "toDoContainer";
+        toDoList.appendChild(div);
+        let listElement: HTMLLIElement = document.createElement ("li");
+        listElement.classList.add("toDo");
+        toDoList.appendChild(listElement);
+        listElement.textContent = aufgabenArray[index].text;
+       
         let trash: HTMLElement = document.createElement("i");
         trash.className = "fas fa-trash-alt"; 
         let checkbox: HTMLInputElement = document.createElement("input");

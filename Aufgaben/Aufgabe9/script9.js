@@ -28,9 +28,12 @@ var Aufgabe9;
             for (var index = 0; index < aufgabenArray.length; index++) {
                 var toDoInput = aufgabenArray[index];
                 var div = document.createElement("div");
-                div.classList.add("toDo");
-                div.textContent = aufgabenArray[index].text;
+                div.className = "toDoContainer";
                 toDoList.appendChild(div);
+                var listElement = document.createElement("li");
+                listElement.classList.add("toDo");
+                toDoList.appendChild(listElement);
+                listElement.textContent = aufgabenArray[index].text;
                 var trash = document.createElement("i");
                 trash.className = "fas fa-trash-alt";
                 var checkbox = document.createElement("input");
