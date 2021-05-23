@@ -4,7 +4,8 @@ namespace Aufgabe9 {
     let inputField: HTMLInputElement = document.getElementById("textInput") as HTMLInputElement;
     let toDoList: HTMLElement = document.querySelector(".toDoList");
     let arrow: HTMLElement = document.querySelector(".fa-arrow-circle-right");
-    let toDoContainer: HTMLElement = document.querySelector(".toDoContainer");
+    let zaehler: number = 1;
+    
      
     //interface definieren  
     interface ToDoItem {
@@ -20,7 +21,11 @@ namespace Aufgabe9 {
       aufgabenArray.push({
         text: inputField.value,
         checked: false
-      });
+        
+        
+      } );
+      
+      document.querySelector(".taskCount").innerHTML = zaehler.toString();
       showToDo();
     });
 
@@ -35,37 +40,44 @@ namespace Aufgabe9 {
             checked: false
             
           });
-          
+          document.querySelector(".taskCount").innerHTML = zaehler.toString();
           showToDo();
         }
       }
     );
+
+    
       //Funktion, die ToDos ausgibt
     function showToDo(): void {
         toDoList.innerHTML = "";
+
+        zaehler = zaehler + 1;
        
 
         for (let index: number = 0; index < aufgabenArray.length; index++) {
         const toDoInput: ToDoItem = aufgabenArray[index];
 
-        
+          // Div erstellen
+        let div: HTMLDivElement = document.createElement("div");
+        div.classList.add("toDoContainer");
+        toDoList.appendChild(div);
      
         
         //Liste erstellen
         let listElement: HTMLLIElement = document.createElement ("li");
         listElement.classList.add("toDo");
-        toDoList.appendChild(listElement);
+        div.appendChild(listElement);
         listElement.textContent = aufgabenArray[index].text;
         
         
         //Icons
         let trashIcon: HTMLElement = document.createElement("i");
         let trash: Attr = document.createAttribute("class");
-
         trash.value = "far fa-trash-alt";
         trashIcon.setAttributeNode(trash);
         listElement.appendChild(trashIcon);
 
+    
         let circleIcon: HTMLElement = document.createElement ("i");
         let circle: Attr = document.createAttribute("class");
 
@@ -76,25 +88,39 @@ namespace Aufgabe9 {
         let checkIcon: HTMLElement = document.createElement("i");
         let checkbox: Attr = document.createAttribute("class");
 
-        checkbox.value = "far fa-check-circle hidden";
+        checkbox.value = "far fa-check-circle";
         checkIcon.setAttributeNode(checkbox);
         listElement.appendChild(checkIcon);
         
+        //Löschen per Klick
+        trashIcon.addEventListener("click", function (): void {
+          zaehler = zaehler - 1;
+          document.querySelector(".taskCount").innerHTML = zaehler.toString();
+          div.remove();
+          
+          aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
+              return value.text != aufgabenArray[index].text;
+              
+             
+
+          });
+
 
         
-
+      });
       
- 
-        
-      }
-    
     }
 
-    
+   
+
+  
      
-  });
+  
   
  
+
+}
+  });
 
 }
 

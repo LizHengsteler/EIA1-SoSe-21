@@ -5,7 +5,7 @@ var Aufgabe9;
         var inputField = document.getElementById("textInput");
         var toDoList = document.querySelector(".toDoList");
         var arrow = document.querySelector(".fa-arrow-circle-right");
-        var toDoContainer = document.querySelector(".toDoContainer");
+        var zaehler = 1;
         //Array erstellen
         var aufgabenArray = [];
         //Eventlistener für Pfeil
@@ -14,6 +14,7 @@ var Aufgabe9;
                 text: inputField.value,
                 checked: false
             });
+            document.querySelector(".taskCount").innerHTML = zaehler.toString();
             showToDo();
         });
         //Eventlistener Enter
@@ -24,18 +25,24 @@ var Aufgabe9;
                     text: inputField.value,
                     checked: false
                 });
+                document.querySelector(".taskCount").innerHTML = zaehler.toString();
                 showToDo();
             }
         });
         //Funktion, die ToDos ausgibt
         function showToDo() {
             toDoList.innerHTML = "";
-            for (var index = 0; index < aufgabenArray.length; index++) {
+            zaehler = zaehler + 1;
+            var _loop_1 = function (index) {
                 var toDoInput = aufgabenArray[index];
+                // Div erstellen
+                var div = document.createElement("div");
+                div.classList.add("toDoContainer");
+                toDoList.appendChild(div);
                 //Liste erstellen
                 var listElement = document.createElement("li");
                 listElement.classList.add("toDo");
-                toDoList.appendChild(listElement);
+                div.appendChild(listElement);
                 listElement.textContent = aufgabenArray[index].text;
                 //Icons
                 var trashIcon = document.createElement("i");
@@ -53,6 +60,18 @@ var Aufgabe9;
                 checkbox.value = "far fa-check-circle";
                 checkIcon.setAttributeNode(checkbox);
                 listElement.appendChild(checkIcon);
+                //Löschen per Klick
+                trashIcon.addEventListener("click", function () {
+                    zaehler = zaehler - 1;
+                    document.querySelector(".taskCount").innerHTML = zaehler.toString();
+                    div.remove();
+                    aufgabenArray = aufgabenArray.filter(function (value) {
+                        return value.text != aufgabenArray[index].text;
+                    });
+                });
+            };
+            for (var index = 0; index < aufgabenArray.length; index++) {
+                _loop_1(index);
             }
         }
     });
