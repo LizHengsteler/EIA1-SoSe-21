@@ -29,9 +29,9 @@ var Aufgabe9;
         });
         //Funktion, die ToDos ausgibt
         function showToDo() {
+            toDoList.innerHTML = "";
             for (var index = 0; index < aufgabenArray.length; index++) {
                 var toDoInput = aufgabenArray[index];
-                toDoList.innerHTML = "";
                 //Liste erstellen
                 var listElement = document.createElement("li");
                 listElement.classList.add("toDo");
@@ -42,8 +42,17 @@ var Aufgabe9;
                 var trash = document.createAttribute("class");
                 trash.value = "far fa-trash-alt";
                 trashIcon.setAttributeNode(trash);
-                var checkbox = document.createElement("input");
-                checkbox.className = "checkbox";
+                listElement.appendChild(trashIcon);
+                var circleIcon = document.createElement("i");
+                var circle = document.createAttribute("class");
+                circle.value = "far fa-circle";
+                circleIcon.setAttributeNode(circle);
+                listElement.appendChild(circleIcon);
+                var checkIcon = document.createElement("i");
+                var checkbox = document.createAttribute("class");
+                checkbox.value = "far fa-check-circle";
+                checkIcon.setAttributeNode(checkbox);
+                listElement.appendChild(checkIcon);
             }
         }
     });

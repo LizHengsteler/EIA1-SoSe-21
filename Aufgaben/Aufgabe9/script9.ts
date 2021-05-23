@@ -42,14 +42,14 @@ namespace Aufgabe9 {
     );
       //Funktion, die ToDos ausgibt
     function showToDo(): void {
-
-
-      for (let index: number = 0; index < aufgabenArray.length; index++) {
-        const toDoInput: ToDoItem = aufgabenArray[index];
         toDoList.innerHTML = "";
+       
 
+        for (let index: number = 0; index < aufgabenArray.length; index++) {
+        const toDoInput: ToDoItem = aufgabenArray[index];
 
         
+     
         
         //Liste erstellen
         let listElement: HTMLLIElement = document.createElement ("li");
@@ -57,21 +57,40 @@ namespace Aufgabe9 {
         toDoList.appendChild(listElement);
         listElement.textContent = aufgabenArray[index].text;
         
+        
         //Icons
         let trashIcon: HTMLElement = document.createElement("i");
         let trash: Attr = document.createAttribute("class");
 
         trash.value = "far fa-trash-alt";
         trashIcon.setAttributeNode(trash);
+        listElement.appendChild(trashIcon);
+
+        let circleIcon: HTMLElement = document.createElement ("i");
+        let circle: Attr = document.createAttribute("class");
+
+        circle.value = "far fa-circle";
+        circleIcon.setAttributeNode(circle);
+        listElement.appendChild(circleIcon);
     
-        let checkbox: HTMLInputElement = document.createElement("input");
-        checkbox.className = "checkbox";
-       
-     
+        let checkIcon: HTMLElement = document.createElement("i");
+        let checkbox: Attr = document.createAttribute("class");
+
+        checkbox.value = "far fa-check-circle hidden";
+        checkIcon.setAttributeNode(checkbox);
+        listElement.appendChild(checkIcon);
+        
+
+        
+
+      
+ 
         
       }
     
     }
+
+    
      
   });
   
