@@ -4,6 +4,7 @@ body {
     color: #474747b0;
     
     
+    
 }
 
 
@@ -12,9 +13,15 @@ body {
     height: 20px;
     width: 300px;
     box-shadow: 3px 3px 3px rgba(165, 163, 163, 0.739);
+    margin-left: 37px;
+    
     
 
     
+}
+
+h1, h3 {
+    margin-left: 37px;
 }
 
 
@@ -25,6 +32,7 @@ li {
     height: 20px;
     width: 300px;
     list-style: none;
+    
     
 
 }
@@ -46,16 +54,19 @@ li {
 }
 
 .fa-circle {
-    left: 20px;
+    
+    left: 100%
     
     
 }
+.fa-check-circle {
+    left: 100%
+    
+    
+    
+}
+
 
 .hidden {
     display: none !important;
 }
-
-.checkbox {
-    height: 50px;
-}
-

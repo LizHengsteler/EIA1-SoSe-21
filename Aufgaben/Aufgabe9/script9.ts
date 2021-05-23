@@ -5,6 +5,7 @@ namespace Aufgabe9 {
     let toDoList: HTMLElement = document.querySelector(".toDoList");
     let arrow: HTMLElement = document.querySelector(".fa-arrow-circle-right");
     let zaehler: number = 1;
+   
     
      
     //interface definieren  
@@ -77,26 +78,21 @@ namespace Aufgabe9 {
         trashIcon.setAttributeNode(trash);
         listElement.appendChild(trashIcon);
 
-    
-        let circleIcon: HTMLElement = document.createElement ("i");
-        let circle: Attr = document.createAttribute("class");
+        let checkbox: HTMLInputElement = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.className = "checkBox";
+        listElement.appendChild(checkbox);
 
-        circle.value = "far fa-circle";
-        circleIcon.setAttributeNode(circle);
-        listElement.appendChild(circleIcon);
     
-        let checkIcon: HTMLElement = document.createElement("i");
-        let checkbox: Attr = document.createAttribute("class");
-
-        checkbox.value = "far fa-check-circle";
-        checkIcon.setAttributeNode(checkbox);
-        listElement.appendChild(checkIcon);
-        
+       
         //Löschen per Klick
         trashIcon.addEventListener("click", function (): void {
+
           zaehler = zaehler - 1;
           document.querySelector(".taskCount").innerHTML = zaehler.toString();
+
           div.remove();
+          
           
           aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
               return value.text != aufgabenArray[index].text;
@@ -111,13 +107,6 @@ namespace Aufgabe9 {
       
     }
 
-   
-
-  
-     
-  
-  
- 
 
 }
   });

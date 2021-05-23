@@ -50,16 +50,10 @@ var Aufgabe9;
                 trash.value = "far fa-trash-alt";
                 trashIcon.setAttributeNode(trash);
                 listElement.appendChild(trashIcon);
-                var circleIcon = document.createElement("i");
-                var circle = document.createAttribute("class");
-                circle.value = "far fa-circle";
-                circleIcon.setAttributeNode(circle);
-                listElement.appendChild(circleIcon);
-                var checkIcon = document.createElement("i");
-                var checkbox = document.createAttribute("class");
-                checkbox.value = "far fa-check-circle";
-                checkIcon.setAttributeNode(checkbox);
-                listElement.appendChild(checkIcon);
+                var checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.className = "checkBox";
+                listElement.appendChild(checkbox);
                 //Löschen per Klick
                 trashIcon.addEventListener("click", function () {
                     zaehler = zaehler - 1;
