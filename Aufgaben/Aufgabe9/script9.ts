@@ -4,6 +4,7 @@ namespace Aufgabe9 {
     let inputField: HTMLInputElement = document.getElementById("textInput") as HTMLInputElement;
     let toDoList: HTMLElement = document.querySelector(".toDoList");
     let arrow: HTMLElement = document.querySelector(".fa-arrow-circle-right");
+    let toDoContainer: HTMLElement = document.querySelector(".toDoContainer");
 
     interface ToDoItem {
       text: string;
@@ -45,8 +46,10 @@ namespace Aufgabe9 {
       for (let index: number = 0; index < aufgabenArray.length; index++) {
         const toDoInput: ToDoItem = aufgabenArray[index];
         let div: HTMLDivElement = document.createElement ("div");
+        div.classList.add("toDo");
         div.textContent = aufgabenArray[index].text;
         toDoList.appendChild(div);
+        
         let trash: HTMLElement = document.createElement("i");
         trash.className = "fas fa-trash-alt"; 
         let checkbox: HTMLInputElement = document.createElement("input");
