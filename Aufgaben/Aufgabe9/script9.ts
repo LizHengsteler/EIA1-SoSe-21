@@ -50,6 +50,7 @@ namespace Aufgabe9 {
 
 
       for (let index: number = 0; index < aufgabenArray.length; index++) {
+        const arrayPosition: ToDoItem = aufgabenArray[index];
        
           // Div erstellen
         let div: HTMLDivElement = document.createElement("div");
@@ -82,8 +83,9 @@ namespace Aufgabe9 {
         trashIcon.addEventListener("click", function (): void {
           zaehler = zaehler - 1;
           counter.innerHTML = zaehler.toString();
-          aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
-            return value.checked != aufgabenArray[index].checked; });
+
+          aufgabenArray = aufgabenArray.filter(function (elem: ToDoItem): boolean {
+            return elem != arrayPosition; });
 
           div.removeChild(listElement);
           div.remove();

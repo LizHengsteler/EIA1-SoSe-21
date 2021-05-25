@@ -1,7 +1,5 @@
 
 
-
-
 /*aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
             return value.text != aufgabenArray[index].text; 
 
