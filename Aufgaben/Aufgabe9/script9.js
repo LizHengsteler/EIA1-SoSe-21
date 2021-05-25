@@ -5,7 +5,8 @@ var Aufgabe9;
         var inputField = document.getElementById("textInput");
         var toDoList = document.querySelector(".toDoList");
         var arrow = document.querySelector(".fa-arrow-circle-right");
-        var zaehler = 1;
+        var zaehler = 0;
+        var counter = document.querySelector(".taskCount");
         //Array erstellen
         var aufgabenArray = [];
         //Eventlistener für Pfeil
@@ -14,9 +15,10 @@ var Aufgabe9;
                 text: inputField.value,
                 checked: false
             });
-            document.querySelector(".taskCount").innerHTML = zaehler.toString();
             showToDo();
             emtpyInput();
+            zaehler = zaehler + 1;
+            counter.innerHTML = zaehler.toString();
         });
         //Eventlistener Enter
         inputField.addEventListener("keydown", function (event) {
@@ -29,12 +31,13 @@ var Aufgabe9;
                 document.querySelector(".taskCount").innerHTML = zaehler.toString();
                 showToDo();
                 emtpyInput();
+                zaehler = zaehler + 1;
+                counter.innerHTML = zaehler.toString();
             }
         });
         //Funktion, die ToDos ausgibt
         function showToDo() {
             toDoList.innerHTML = "";
-            zaehler = zaehler + 1;
             var _loop_1 = function (index) {
                 var toDoInput = aufgabenArray[index];
                 // Div erstellen
@@ -58,17 +61,13 @@ var Aufgabe9;
                 listElement.appendChild(checkbox);
                 //Löschen per Klick
                 trashIcon.addEventListener("click", function () {
-                    counter();
+                    zaehler = zaehler - 1;
+                    counter.innerHTML = zaehler.toString();
                     aufgabenArray = aufgabenArray.filter(function (value) {
                         return value.text != aufgabenArray[index].text;
                     });
                     div.remove();
                 });
-                //Funktion für Zähler -1
-                function counter() {
-                    document.querySelector(".taskCount").innerHTML = zaehler.toString();
-                    zaehler = zaehler - 1;
-                }
             };
             for (var index = 0; index < aufgabenArray.length; index++) {
                 _loop_1(index);
