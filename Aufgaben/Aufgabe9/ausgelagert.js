@@ -1,4 +1,10 @@
+/*aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
+            return value.text != aufgabenArray[index].text;
+
+
+
 /*let circleIcon: HTMLElement = document.createElement ("i");
+
 let circle: Attr = document.createAttribute("class");
 
 circle.value = "far fa-circle";

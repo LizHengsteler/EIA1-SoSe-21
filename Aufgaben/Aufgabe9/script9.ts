@@ -46,12 +46,11 @@ namespace Aufgabe9 {
     
       //Funktion, die ToDos ausgibt
     function showToDo(): void {
-        toDoList.innerHTML = "";
+      toDoList.innerHTML = "";
 
 
-        for (let index: number = 0; index < aufgabenArray.length; index++) {
-        const toDoInput: ToDoItem = aufgabenArray[index];
-
+      for (let index: number = 0; index < aufgabenArray.length; index++) {
+       
           // Div erstellen
         let div: HTMLDivElement = document.createElement("div");
         div.classList.add("toDoContainer");
@@ -84,24 +83,19 @@ namespace Aufgabe9 {
           zaehler = zaehler - 1;
           counter.innerHTML = zaehler.toString();
 
-          aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
-              return value.text != aufgabenArray[index].text;  
-
-          });
-  
-
+          div.removeChild(listElement);
           div.remove();
+          
+          
      
       });
     }
     }
 
 
-    //Funktion input leeren 
+      //Funktion input leeren 
     function emtpyInput (): void {
-  inputField.value = "";
-
-  }
+    inputField.value = ""; }
 
   }); }
 

@@ -39,7 +39,6 @@ var Aufgabe9;
         function showToDo() {
             toDoList.innerHTML = "";
             var _loop_1 = function (index) {
-                var toDoInput = aufgabenArray[index];
                 // Div erstellen
                 var div = document.createElement("div");
                 div.classList.add("toDoContainer");
@@ -63,9 +62,7 @@ var Aufgabe9;
                 trashIcon.addEventListener("click", function () {
                     zaehler = zaehler - 1;
                     counter.innerHTML = zaehler.toString();
-                    aufgabenArray = aufgabenArray.filter(function (value) {
-                        return value.text != aufgabenArray[index].text;
-                    });
+                    div.removeChild(listElement);
                     div.remove();
                 });
             };
