@@ -28,6 +28,7 @@ namespace Aufgabe9 {
       
       document.querySelector(".taskCount").innerHTML = zaehler.toString();
       showToDo();
+      emtpyInput ();
     });
 
     //Eventlistener Enter
@@ -39,10 +40,12 @@ namespace Aufgabe9 {
           aufgabenArray.push({
             text: inputField.value,
             checked: false
+           
             
           });
           document.querySelector(".taskCount").innerHTML = zaehler.toString();
           showToDo();
+          emtpyInput ();
         }
       }
     );
@@ -87,26 +90,38 @@ namespace Aufgabe9 {
        
         //Löschen per Klick
         trashIcon.addEventListener("click", function (): void {
-
-          zaehler = zaehler - 1;
-          document.querySelector(".taskCount").innerHTML = zaehler.toString();
-
-          div.remove();
+          counter();
           
-          
+ 
           aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
-              return value.text != aufgabenArray[index].text;
-              
-             
+              return value.text != aufgabenArray[index].text;  
 
           });
+          
+          
+
+          div.remove();
 
 
         
       });
+
+      //Funktion für Zähler -1
+        function counter (): void {
+        document.querySelector(".taskCount").innerHTML = zaehler.toString();
+        zaehler = zaehler - 1;
+
+      }
       
     }
 
+    
+
+
+}
+    //Funktion input leeren 
+    function emtpyInput (): void {
+  inputField.value = "";
 
 }
   });

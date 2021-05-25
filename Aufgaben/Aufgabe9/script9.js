@@ -16,6 +16,7 @@ var Aufgabe9;
             });
             document.querySelector(".taskCount").innerHTML = zaehler.toString();
             showToDo();
+            emtpyInput();
         });
         //Eventlistener Enter
         inputField.addEventListener("keydown", function (event) {
@@ -27,6 +28,7 @@ var Aufgabe9;
                 });
                 document.querySelector(".taskCount").innerHTML = zaehler.toString();
                 showToDo();
+                emtpyInput();
             }
         });
         //Funktion, die ToDos ausgibt
@@ -56,17 +58,25 @@ var Aufgabe9;
                 listElement.appendChild(checkbox);
                 //Löschen per Klick
                 trashIcon.addEventListener("click", function () {
-                    zaehler = zaehler - 1;
-                    document.querySelector(".taskCount").innerHTML = zaehler.toString();
-                    div.remove();
+                    counter();
                     aufgabenArray = aufgabenArray.filter(function (value) {
                         return value.text != aufgabenArray[index].text;
                     });
+                    div.remove();
                 });
+                //Funktion für Zähler -1
+                function counter() {
+                    document.querySelector(".taskCount").innerHTML = zaehler.toString();
+                    zaehler = zaehler - 1;
+                }
             };
             for (var index = 0; index < aufgabenArray.length; index++) {
                 _loop_1(index);
             }
+        }
+        //Funktion input leeren 
+        function emtpyInput() {
+            inputField.value = "";
         }
     });
 })(Aufgabe9 || (Aufgabe9 = {}));
