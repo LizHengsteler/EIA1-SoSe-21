@@ -22,7 +22,7 @@ namespace Aufgabe9 {
     arrow.addEventListener("click", function (): void {
       aufgabenArray.push({
         text: inputField.value,
-        checked: false });
+        checked: true });
 
       showToDo();
       emtpyInput ();
@@ -35,7 +35,7 @@ namespace Aufgabe9 {
           event.preventDefault();
           aufgabenArray.push({
             text: inputField.value,
-            checked: false });
+            checked: true });
           document.querySelector(".taskCount").innerHTML = zaehler.toString();
           showToDo();
           emtpyInput ();
@@ -82,6 +82,8 @@ namespace Aufgabe9 {
         trashIcon.addEventListener("click", function (): void {
           zaehler = zaehler - 1;
           counter.innerHTML = zaehler.toString();
+          aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
+            return value.checked != aufgabenArray[index].checked; });
 
           div.removeChild(listElement);
           div.remove();

@@ -13,7 +13,7 @@ var Aufgabe9;
         arrow.addEventListener("click", function () {
             aufgabenArray.push({
                 text: inputField.value,
-                checked: false
+                checked: true
             });
             showToDo();
             emtpyInput();
@@ -26,7 +26,7 @@ var Aufgabe9;
                 event.preventDefault();
                 aufgabenArray.push({
                     text: inputField.value,
-                    checked: false
+                    checked: true
                 });
                 document.querySelector(".taskCount").innerHTML = zaehler.toString();
                 showToDo();
@@ -62,6 +62,9 @@ var Aufgabe9;
                 trashIcon.addEventListener("click", function () {
                     zaehler = zaehler - 1;
                     counter.innerHTML = zaehler.toString();
+                    aufgabenArray = aufgabenArray.filter(function (value) {
+                        return value.checked != aufgabenArray[index].checked;
+                    });
                     div.removeChild(listElement);
                     div.remove();
                 });
