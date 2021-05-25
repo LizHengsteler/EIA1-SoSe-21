@@ -46,7 +46,7 @@ namespace Aufgabe9 {
         }
       }
     );
-
+    
     
       //Funktion, die ToDos ausgibt
     function showToDo(): void {
