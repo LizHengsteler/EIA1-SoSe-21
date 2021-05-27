@@ -24,8 +24,6 @@ var Aufgabe10;
     var addButtonDOMElement;
     var todosDOMElement;
     var counterDOMElement;
-    var doneCounterDOMElement;
-    var leftCounterDOMElement;
     /**
     * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
     * initialisiert werden
@@ -56,8 +54,6 @@ var Aufgabe10;
         addButtonDOMElement = document.querySelector("#addButton");
         todosDOMElement = document.querySelector("#todos");
         counterDOMElement = document.querySelector("#counter");
-        doneCounterDOMElement = document.querySelector("#done");
-        leftCounterDOMElement = document.querySelector("#left");
         /**
          * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener
          * auf den AddToDo Button gesetzt werden.

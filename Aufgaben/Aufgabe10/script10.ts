@@ -27,8 +27,7 @@ namespace Aufgabe10 {
  var addButtonDOMElement: HTMLElement;
  var todosDOMElement: HTMLElement;
  var counterDOMElement: HTMLElement;
- var doneCounterDOMElement: HTMLElement;
- var leftCounterDOMElement: HTMLElement;
+ 
  
   /**
   * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
@@ -69,8 +68,7 @@ namespace Aufgabe10 {
  addButtonDOMElement = document.querySelector("#addButton");
  todosDOMElement = document.querySelector("#todos");
  counterDOMElement = document.querySelector("#counter");
- doneCounterDOMElement = document.querySelector("#done");
- leftCounterDOMElement = document.querySelector("#left");
+ 
  
      /**
       * Jetzt da der DOM verfügbar ist kann auch ein Event-Listener

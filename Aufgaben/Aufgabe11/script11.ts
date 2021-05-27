@@ -131,7 +131,10 @@ namespace Aufgabe11 {
      
          updateCounter();
      }
-     
+      
+    
+
+
      function updateCounter(): void {
         
          counterDOMElement.innerHTML = toDoArray.length + " in total";
