@@ -1,5 +1,5 @@
-var Aufgabe10;
-(function (Aufgabe10) {
+var Aufgabe11;
+(function (Aufgabe11) {
     /**
      * Die ToDos werden in dem Array todosText gespeichert
      * Jedes ToDo hat aber, neben dem ToDo-Text, einen zweiten
@@ -186,5 +186,5 @@ var Aufgabe10;
             drawListToDOM();
         }
     });
-})(Aufgabe10 || (Aufgabe10 = {}));
-//# sourceMappingURL=script.js.map
+})(Aufgabe11 || (Aufgabe11 = {}));
+//# sourceMappingURL=script11.js.map

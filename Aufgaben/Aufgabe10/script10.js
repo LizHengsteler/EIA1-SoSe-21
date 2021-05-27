@@ -187,4 +187,4 @@ var Aufgabe10;
         }
     });
 })(Aufgabe10 || (Aufgabe10 = {}));
-//# sourceMappingURL=script.js.map
+//# sourceMappingURL=script10.js.map
