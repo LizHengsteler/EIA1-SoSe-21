@@ -48,9 +48,7 @@ li {
     margin-top: 25px;
     background-color: white;
    
-    
-    
-    
+ 
 
 }
 .far
@@ -58,19 +56,19 @@ li {
 .fa-circle {
     position: absolute;
     
-    left: 100%
+    left: 100%;
     
     
 }
 .fa-check-circle {
     position: absolute;
-    left: 100%
+    left: 100%;
     
     
     
 }
 
 
-.hidden {
+/*.hidden {
     display: none !important;
 }

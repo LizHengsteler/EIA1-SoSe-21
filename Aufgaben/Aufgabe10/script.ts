@@ -123,8 +123,8 @@
           * Status der ToDos abbildet, für dieses ToDo (weil selbe Stelle im Array)
           * der Status "unchecked", hier false, gepusht.
           */
-         todosText.push(inputDOMElement.value);
-         todosChecked.push(false);
+         todosText.unshift(inputDOMElement.value);
+         todosChecked.unshift(false);
          
          // Jetzt wird der Text aus dem Eingabefeld gelöscht
          inputDOMElement.value = "";

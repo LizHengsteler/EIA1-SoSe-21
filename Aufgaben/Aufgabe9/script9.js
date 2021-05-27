@@ -55,20 +55,33 @@ var Aufgabe9;
                 trash.value = "far fa-trash-alt";
                 trashIcon.setAttributeNode(trash);
                 listElement.appendChild(trashIcon);
-                var circleIcon = document.createElement("i");
-                var circle = document.createAttribute("class");
-                circle.value = "far fa-circle";
-                circleIcon.setAttributeNode(circle);
-                listElement.appendChild(circleIcon);
-                var checkIcon = document.createElement("i");
-                var check = document.createAttribute("class");
-                check.value = "far fa-check-circle hidden";
-                checkIcon.setAttributeNode(check);
+                var checkIcon = document.createElement("input");
+                checkIcon.type = "checkbox";
+                var checked = document.createAttribute("class");
+                checked.value = "checkBox";
+                checkIcon.setAttributeNode(checked);
                 listElement.appendChild(checkIcon);
-                document.querySelector(".fa-circle").addEventListener("click", function () {
-                    document.querySelector(".fa-circle").classList.add("hidden");
-                    document.querySelector(".fa-check-circle").classList.remove("hidden");
+                /*const checkBox: HTMLElement = document.createElement("i");
+                listElement.appendChild(checkBox);
+                checkBox.classList.add("far", "fa-circle");
+        
+                const checkedBox: HTMLElement = document.createElement("i");
+                listElement.appendChild(checkedBox);
+                checkedBox.classList.add("far", "fa-check-circle", "hidden");
+        
+                checkBox.addEventListener("click", function (): void {
+        
+                    checkBox.classList.add("hidden");
+                    checkedBox.classList.remove("hidden");
+        
                 });
+        
+                checkedBox.addEventListener("click", function (): void {
+        
+                    checkedBox.classList.add("hidden");
+                    checkBox.classList.remove("hidden");
+        
+                }); */
                 //Löschen per Klick
                 trashIcon.addEventListener("click", function () {
                     zaehler = zaehler - 1;

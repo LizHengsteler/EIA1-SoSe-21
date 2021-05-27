@@ -1,4 +1,19 @@
+/*let circleIcon: HTMLElement = document.createElement ("i");
+        let circle: Attr = document.createAttribute("class");
+        circle.value = "far fa-circle";
+        circleIcon.setAttributeNode(circle);
+        listElement.appendChild(circleIcon);
 
+        let checkIcon: HTMLElement = document.createElement ("i");
+        let check: Attr = document.createAttribute("class");
+        check.value = "far fa-check-circle hidden";
+        checkIcon.setAttributeNode(check);
+        listElement.appendChild(checkIcon);
+
+        document.querySelector(".fa-circle").addEventListener("click", function (): void {
+          document.querySelector(".fa-circle").classList.add("hidden");
+          document.querySelector(".fa-check-circle").classList.remove("hidden");
+        });
 
 /*aufgabenArray = aufgabenArray.filter(function (value: ToDoItem): boolean {
             return value.text != aufgabenArray[index].text; 
