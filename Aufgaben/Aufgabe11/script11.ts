@@ -1,5 +1,6 @@
 namespace Aufgabe11 {
 
+
      var inputDOMElement: HTMLInputElement;
      var addButtonDOMElement: HTMLElement;
      var todosDOMElement: HTMLElement;
@@ -7,6 +8,7 @@ namespace Aufgabe11 {
      var doneCounterDOMElement: HTMLElement;
      var leftCounterDOMElement: HTMLElement;
      var counter: number = 1;
+     declare var Artyom: any;
      
   
      window.addEventListener("load", function(): void {
@@ -131,5 +133,34 @@ namespace Aufgabe11 {
      
           drawListToDOM();
      }
+     const artyom: any = new Artyom();
+    
+     artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function(i: any, wildcard: string): void {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+        }
+    });
+    
+     function startContinuousArtyom(): void {
+        artyom.fatality();
+    
+        setTimeout(
+            function(): void {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function(): void {
+                    console.log("Ready!");
+                });
+            }, 
+            250);
+    }
+    
+     startContinuousArtyom();
     });
     }

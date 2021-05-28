@@ -23,4 +23,4 @@ window.addEventListener("load", function () {
     }
     startContinuousArtyom();
 });
-//# sourceMappingURL=playground-artyom.js.map
+//# sourceMappingURL=playground-artyom-script.js.map
