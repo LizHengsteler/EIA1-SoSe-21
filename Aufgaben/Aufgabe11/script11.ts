@@ -1,66 +1,60 @@
 namespace Aufgabe11 {
-
-
-     var inputDOMElement: HTMLInputElement;
-     var addButtonDOMElement: HTMLElement;
-     var todosDOMElement: HTMLElement;
-     var counterDOMElement: HTMLElement;
-     var doneCounterDOMElement: HTMLElement;
-     var leftCounterDOMElement: HTMLElement;
-     var counter: number = 1;
-     declare var Artyom: any;
-     
-  
-     window.addEventListener("load", function(): void {
     
-    //interface definieren  
+
+window.addEventListener("load", function(): void {
+
+    var inputDOMElement: HTMLInputElement;
+    var addButtonDOMElement: HTMLElement;
+    var todosDOMElement: HTMLElement;
+    var counterDOMElement: HTMLElement;
+    var donecounterDOMElement: HTMLElement;
+    var leftcounterDOMElement: HTMLElement;
     
-     interface ToDoItem {
+   
+    
+          //interface definieren  
+    
+    interface ToDoItem {
         todosText: string;
         todosChecked: boolean; }
     
     
-    //Objekte im Array
-     let toDoArray: ToDoItem[] = [
+        //Objekte im Array
+    let toDoArray: ToDoItem[] = [
         {
-            todosText: "EIA Aufgabe 11 erledigen",
+            todosText: "EIA Aufgabe 10 erledigen",
             todosChecked: true 
         } , 
         {
-                todosText: "Thai-Curry kochen",
+                todosText: "Sport machen",
                 todosChecked: false 
         } , 
         {
-                todosText: "Pflanzen gießen",
+                todosText: "Eis essen gehen",
                 todosChecked: false }  
      
      ];
-    
+
+    inputDOMElement = document.querySelector("#inputTodo");
+    addButtonDOMElement = document.querySelector("#addButton");
+    todosDOMElement = document.querySelector("#todos");
+    counterDOMElement = document.querySelector("#counter");
+    donecounterDOMElement = document.querySelector("#done");
+    leftcounterDOMElement = document.querySelector("#left");
+
+    addButtonDOMElement.addEventListener("click", addTodo);
      
-     inputDOMElement = document.querySelector("#inputTodo");
-     addButtonDOMElement = document.querySelector("#addButton");
-     todosDOMElement = document.querySelector("#todos");
-     counterDOMElement = document.querySelector("#counter");
-     doneCounterDOMElement = document.querySelector("#done");
-     leftCounterDOMElement = document.querySelector("#left");
-     
-   
-     addButtonDOMElement.addEventListener("click", addTodo);
-     
-     
-     drawListToDOM();
+    drawListToDOM();
      
      
-     function drawListToDOM(): void {
+    function drawListToDOM(): void {
+
          // alle todos erst einmal aus dem DOM löschen
          todosDOMElement.innerHTML = "";
      
          // das ToDo-Array durchlaufen (iterieren) und Todo für Todo in den DOM schreiben
          for (let index: number = 0; index < toDoArray.length; index++) {
      
-             
-            //Neues DIV-Element erstellen 
-            
              let todo: HTMLElement = document.createElement("div");
              todo.classList.add("todo");
      
@@ -70,97 +64,81 @@ namespace Aufgabe11 {
      
              // Zuweisen der Event-Listener für den Check- und den Trash-Button
              todo.querySelector(".check").addEventListener("click", function(): void {
-
+                 
                  toggleCheckState(index);
              });
              todo.querySelector(".trash").addEventListener("click", function(): void {
-            
+                 
                  deleteTodo(index);
              });
-
-             todosDOMElement.appendChild(todo);
-             
+     
             
+             todosDOMElement.appendChild(todo);
          }
      
          updateCounter();
-     }
-      
-    
-
-
-     function updateCounter(): void {
-        
-         counterDOMElement.innerHTML = toDoArray.length + " in total";
-         let index: number = 0;
-         if (toDoArray[index].todosChecked == false) {
-            counter = counter + 1;
-            document.querySelector("#done").innerHTML = counter.toString() + "done";
-        }
+         doneTasks();
+         openTasks();
          
-         
-        
      }
-     
- 
-     function addTodo(): void {
+     //Zähler aller Aufgaben
+    function updateCounter(): void {
+        
+         counterDOMElement.innerHTML = toDoArray.length + " tasks/s in total,";
        
+     }
+    // Zähler für erledigte Aufgaben
+    function doneTasks(): void {
+        let counterDone: number = 0;
+        for (var index: number = 0; index < toDoArray.length; index++) {
+            if (toDoArray[index].todosChecked == true)
+            counterDone++;
+        }
+        donecounterDOMElement.innerHTML = counterDone + " done,";
+    }
+
+     // Zähler für offene Aufgaben
+    function openTasks(): void {
+        let counter: number = 0;
+        for (var index: number = 0; index < toDoArray.length; index++) {
+            if (toDoArray[index].todosChecked == false)
+            counter++;
+        }
+        leftcounterDOMElement.innerHTML = counter + " left";
+    }
+
+   
+    
+     
+    function addTodo(): void {
+         
          if (inputDOMElement.value != "") {
-           
+             
     
               toDoArray.unshift({
                 todosText: inputDOMElement.value,
                 todosChecked: false });
-           
+             
+             
+             // Text aus dem Eingabefeld löschen
               inputDOMElement.value = "";
      
               drawListToDOM();
          }
      }
      
-
-     function toggleCheckState(index: number): void {
-   
+    function toggleCheckState(index: number): void {
+     
           toDoArray[index].todosChecked = !toDoArray[index].todosChecked;
-   
-          drawListToDOM();
-     }
-   
-     function deleteTodo(index: number): void {
-        
-          toDoArray.splice(index, 1);
-          
      
           drawListToDOM();
      }
-     const artyom: any = new Artyom();
-    
-     artyom.addCommands({
-        indexes: ["erstelle Aufgabe *"],
-        smart: true,
-        action: function(i: any, wildcard: string): void {
-            console.log("Neue Aufgabe wird erstellt: " + wildcard);
-        }
-    });
-    
-     function startContinuousArtyom(): void {
-        artyom.fatality();
-    
-        setTimeout(
-            function(): void {
-                artyom.initialize({
-                    lang: "de-DE",
-                    continuous: true,
-                    listen: true,
-                    interimResults: true,
-                    debug: true
-                }).then(function(): void {
-                    console.log("Ready!");
-                });
-            }, 
-            250);
-    }
-    
-     startContinuousArtyom();
+     
+    function deleteTodo(index: number): void {
+         
+          toDoArray.splice(index, 1);
+        
+          drawListToDOM();
+     }
     });
     }

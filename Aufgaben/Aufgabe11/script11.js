@@ -1,26 +1,24 @@
 var Aufgabe11;
 (function (Aufgabe11) {
-    var inputDOMElement;
-    var addButtonDOMElement;
-    var todosDOMElement;
-    var counterDOMElement;
-    var doneCounterDOMElement;
-    var leftCounterDOMElement;
-    var counter = 1;
     window.addEventListener("load", function () {
-        //interface definieren  
+        var inputDOMElement;
+        var addButtonDOMElement;
+        var todosDOMElement;
+        var counterDOMElement;
+        var donecounterDOMElement;
+        var leftcounterDOMElement;
         //Objekte im Array
         var toDoArray = [
             {
-                todosText: "EIA Aufgabe 11 erledigen",
+                todosText: "EIA Aufgabe 10 erledigen",
                 todosChecked: true
             },
             {
-                todosText: "Thai-Curry kochen",
+                todosText: "Sport machen",
                 todosChecked: false
             },
             {
-                todosText: "Pflanzen gießen",
+                todosText: "Eis essen gehen",
                 todosChecked: false
             }
         ];
@@ -28,15 +26,14 @@ var Aufgabe11;
         addButtonDOMElement = document.querySelector("#addButton");
         todosDOMElement = document.querySelector("#todos");
         counterDOMElement = document.querySelector("#counter");
-        doneCounterDOMElement = document.querySelector("#done");
-        leftCounterDOMElement = document.querySelector("#left");
+        donecounterDOMElement = document.querySelector("#done");
+        leftcounterDOMElement = document.querySelector("#left");
         addButtonDOMElement.addEventListener("click", addTodo);
         drawListToDOM();
         function drawListToDOM() {
             // alle todos erst einmal aus dem DOM löschen
             todosDOMElement.innerHTML = "";
             var _loop_1 = function (index) {
-                //Neues DIV-Element erstellen 
                 var todo = document.createElement("div");
                 todo.classList.add("todo");
                 todo.innerHTML = "<span class='check " + toDoArray[index].todosChecked + "'><i class='fas fa-check'></i></span>"
@@ -56,14 +53,30 @@ var Aufgabe11;
                 _loop_1(index);
             }
             updateCounter();
+            doneTasks();
+            openTasks();
         }
+        //Zähler aller Aufgaben
         function updateCounter() {
-            counterDOMElement.innerHTML = toDoArray.length + " in total";
-            var index = 0;
-            if (toDoArray[index].todosChecked == false) {
-                counter = counter + 1;
-                document.querySelector("#done").innerHTML = counter.toString() + "done";
+            counterDOMElement.innerHTML = toDoArray.length + " tasks/s in total,";
+        }
+        // Zähler für erledigte Aufgaben
+        function doneTasks() {
+            var counterDone = 0;
+            for (var index = 0; index < toDoArray.length; index++) {
+                if (toDoArray[index].todosChecked == true)
+                    counterDone++;
             }
+            donecounterDOMElement.innerHTML = counterDone + " done,";
+        }
+        // Zähler für offene Aufgaben
+        function openTasks() {
+            var counter = 0;
+            for (var index = 0; index < toDoArray.length; index++) {
+                if (toDoArray[index].todosChecked == false)
+                    counter++;
+            }
+            leftcounterDOMElement.innerHTML = counter + " left";
         }
         function addTodo() {
             if (inputDOMElement.value != "") {
@@ -71,6 +84,7 @@ var Aufgabe11;
                     todosText: inputDOMElement.value,
                     todosChecked: false
                 });
+                // Text aus dem Eingabefeld löschen
                 inputDOMElement.value = "";
                 drawListToDOM();
             }
@@ -83,29 +97,6 @@ var Aufgabe11;
             toDoArray.splice(index, 1);
             drawListToDOM();
         }
-        var artyom = new Artyom();
-        artyom.addCommands({
-            indexes: ["erstelle Aufgabe *"],
-            smart: true,
-            action: function (i, wildcard) {
-                console.log("Neue Aufgabe wird erstellt: " + wildcard);
-            }
-        });
-        function startContinuousArtyom() {
-            artyom.fatality();
-            setTimeout(function () {
-                artyom.initialize({
-                    lang: "de-DE",
-                    continuous: true,
-                    listen: true,
-                    interimResults: true,
-                    debug: true
-                }).then(function () {
-                    console.log("Ready!");
-                });
-            }, 250);
-        }
-        startContinuousArtyom();
     });
 })(Aufgabe11 || (Aufgabe11 = {}));
 //# sourceMappingURL=script11.js.map

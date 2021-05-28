@@ -8,6 +8,9 @@ main {
     margin: 0 auto;
     text-align: center;
 }
+p {
+    display: inline;
+} 
 
 #counter {
     color: grey;
