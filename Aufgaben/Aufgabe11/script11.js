@@ -26,6 +26,7 @@ var Aufgabe11;
     var counterDOMElement;
     var doneCounterDOMElement;
     var leftCounterDOMElement;
+    var counter = 1;
     /**
     * Sobald der DOM geladen wurde können grundlegende DOM-Interaktionen
     * initialisiert werden
@@ -113,6 +114,11 @@ var Aufgabe11;
         }
         function updateCounter() {
             counterDOMElement.innerHTML = toDoArray.length + " in total";
+            var index = 0;
+            if (toDoArray[index].todosChecked == false) {
+                counter = counter + 1;
+                document.querySelector("#done").innerHTML = counter.toString() + "done";
+            }
         }
         /**
          * Ein neues ToDo wird folgendermaßen erstellt:
