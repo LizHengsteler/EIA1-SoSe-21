@@ -8,17 +8,28 @@ main {
     margin: 0 auto;
     text-align: center;
 }
+
+h4 {
+    color: grey;
+}
+
 p {
     display: inline;
 } 
 .fa-microphone {
     position: absolute;
-    top: 108px;
+    top: 148px;
     left: 430px;
     font-size: 40px;
     cursor: pointer;
+    color: grey;
 
 }
+
+.fa-microphone:hover {
+    color: black;
+}
+
 #counter {
     color: grey;
 }
@@ -102,4 +113,5 @@ p {
 
 .trash:hover {
     color: black;
+    
 }
