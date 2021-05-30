@@ -11,7 +11,7 @@ todosChecked: boolean; }
 //Objekte im Array
 let toDoArray: ToDoItem[] = [
     {
-    todosText: "EIA Aufgabe 10 erledigen",
+    todosText: "EIA Aufgabe 11 erledigen",
     todosChecked: true 
     } , {
     todosText: "Sport machen",
@@ -20,7 +20,7 @@ let toDoArray: ToDoItem[] = [
     todosText: "Eis essen gehen",
     todosChecked: false }  ];
 
-declare var Artyom: any;
+
 
 
 window.addEventListener("load", function(): void {
@@ -42,7 +42,7 @@ window.addEventListener("load", function(): void {
                     console.log("Ready!");
                 });
             }, 
-            250);
+            200);
     }
     
     startContinuousArtyom();
@@ -117,7 +117,7 @@ window.addEventListener("load", function(): void {
      
              todo.innerHTML =  "<span class='check " + toDoArray[index].todosChecked + "'><i class='fas fa-check'></i></span>"
                                  + toDoArray[index].todosText +
-                                 "<span class='trash fas fa-trash-alt'></span>" + "<span class='fas fa-microphone'></span>";
+                                 "<span class='trash fas fa-trash-alt'></span>";
      
              // Zuweisen der Event-Listener für den Check- und den Trash-Button
              todo.querySelector(".check").addEventListener("click", function(): void {
