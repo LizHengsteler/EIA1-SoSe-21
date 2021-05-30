@@ -11,7 +11,14 @@ main {
 p {
     display: inline;
 } 
+.fa-microphone {
+    position: absolute;
+    top: 108px;
+    left: 430px;
+    font-size: 40px;
+    cursor: pointer;
 
+}
 #counter {
     color: grey;
 }

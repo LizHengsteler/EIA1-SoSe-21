@@ -1,7 +1,72 @@
 namespace Aufgabe11 {
+
+
+//interface definieren  vor Eventlistener "load" 
     
+interface ToDoItem {
+todosText: string;
+todosChecked: boolean; }
+        
+        
+//Objekte im Array
+let toDoArray: ToDoItem[] = [
+    {
+    todosText: "EIA Aufgabe 10 erledigen",
+    todosChecked: true 
+    } , {
+    todosText: "Sport machen",
+    todosChecked: false 
+    } , {
+    todosText: "Eis essen gehen",
+    todosChecked: false }  ];
+
+declare var Artyom: any;
+
 
 window.addEventListener("load", function(): void {
+    const artyom: any = new Artyom();
+   
+    
+    function startContinuousArtyom(): void {
+        artyom.fatality();
+    
+        setTimeout(
+            function(): void {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function(): void {
+                    console.log("Ready!");
+                });
+            }, 
+            250);
+    }
+    
+    startContinuousArtyom();
+
+    artyom.addCommands({
+        indexes: ["erstelle Aufgabe *"],
+        smart: true,
+        action: function(i: any, wildcard: string): void {
+            console.log("Neue Aufgabe wird erstellt: " + wildcard);
+            toDoArray.unshift({
+                todosText: wildcard,
+                todosChecked: false });
+    
+            drawListToDOM();
+            console.log("Aufgabe  " + wildcard + " wird hinzugefügt");
+            artyom.say("Aufgabe" + wildcard + " wurde hinzugefügt.");
+}
+});
+
+    document.querySelector("#microphone").addEventListener("click", function (): void {
+        artyom.say("Sage erstelle Aufgabe");
+        startContinuousArtyom();
+    });
+    
 
     var inputDOMElement: HTMLInputElement;
     var addButtonDOMElement: HTMLElement;
@@ -9,31 +74,9 @@ window.addEventListener("load", function(): void {
     var counterDOMElement: HTMLElement;
     var donecounterDOMElement: HTMLElement;
     var leftcounterDOMElement: HTMLElement;
+    let inputField: HTMLInputElement;
     
-   
-    
-          //interface definieren  
-    
-    interface ToDoItem {
-        todosText: string;
-        todosChecked: boolean; }
-    
-    
-        //Objekte im Array
-    let toDoArray: ToDoItem[] = [
-        {
-            todosText: "EIA Aufgabe 10 erledigen",
-            todosChecked: true 
-        } , 
-        {
-                todosText: "Sport machen",
-                todosChecked: false 
-        } , 
-        {
-                todosText: "Eis essen gehen",
-                todosChecked: false }  
-     
-     ];
+
 
     inputDOMElement = document.querySelector("#inputTodo");
     addButtonDOMElement = document.querySelector("#addButton");
@@ -41,10 +84,24 @@ window.addEventListener("load", function(): void {
     counterDOMElement = document.querySelector("#counter");
     donecounterDOMElement = document.querySelector("#done");
     leftcounterDOMElement = document.querySelector("#left");
+    inputField = document.querySelector("#inputTodo");
+   
+    
+
+    /*inputField.addEventListener("keydown", function (event: KeyboardEvent): void {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            drawListToDOM(); 
+        }
+        
+    });*/
+    
 
     addButtonDOMElement.addEventListener("click", addTodo);
      
     drawListToDOM();
+
+
      
      
     function drawListToDOM(): void {
@@ -60,7 +117,7 @@ window.addEventListener("load", function(): void {
      
              todo.innerHTML =  "<span class='check " + toDoArray[index].todosChecked + "'><i class='fas fa-check'></i></span>"
                                  + toDoArray[index].todosText +
-                                 "<span class='trash fas fa-trash-alt'></span>";
+                                 "<span class='trash fas fa-trash-alt'></span>" + "<span class='fas fa-microphone'></span>";
      
              // Zuweisen der Event-Listener für den Check- und den Trash-Button
              todo.querySelector(".check").addEventListener("click", function(): void {
@@ -141,4 +198,7 @@ window.addEventListener("load", function(): void {
           drawListToDOM();
      }
     });
-    }
+
+}
+
+
