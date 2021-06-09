@@ -16,21 +16,6 @@ var Aufgabe11;
     ];
     window.addEventListener("load", function () {
         var artyom = new Artyom();
-        function startContinuousArtyom() {
-            artyom.fatality();
-            setTimeout(function () {
-                artyom.initialize({
-                    lang: "de-DE",
-                    continuous: true,
-                    listen: true,
-                    interimResults: true,
-                    debug: true
-                }).then(function () {
-                    console.log("Ready!");
-                });
-            }, 200);
-        }
-        startContinuousArtyom();
         artyom.addCommands({
             indexes: ["erstelle Aufgabe *"],
             smart: true,
@@ -45,8 +30,21 @@ var Aufgabe11;
                 artyom.say("Aufgabe" + wildcard + " wurde hinzugefügt.");
             }
         });
+        function startContinuousArtyom() {
+            setTimeout(function () {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                }).then(function () {
+                    artyom.say("Sage erstelle Aufgabe");
+                    console.log("Ready!");
+                });
+            }, 250);
+        }
         document.querySelector("#microphone").addEventListener("click", function () {
-            artyom.say("Sage erstelle Aufgabe");
             startContinuousArtyom();
         });
         var inputDOMElement;

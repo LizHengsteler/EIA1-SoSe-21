@@ -25,27 +25,6 @@ let toDoArray: ToDoItem[] = [
 
 window.addEventListener("load", function(): void {
     const artyom: any = new Artyom();
-   
-    
-    function startContinuousArtyom(): void {
-        artyom.fatality();
-    
-        setTimeout(
-            function(): void {
-                artyom.initialize({
-                    lang: "de-DE",
-                    continuous: true,
-                    listen: true,
-                    interimResults: true,
-                    debug: true
-                }).then(function(): void {
-                    console.log("Ready!");
-                });
-            }, 
-            200);
-    }
-    
-    startContinuousArtyom();
 
     artyom.addCommands({
         indexes: ["erstelle Aufgabe *"],
@@ -59,12 +38,38 @@ window.addEventListener("load", function(): void {
             drawListToDOM();
             console.log("Aufgabe  " + wildcard + " wird hinzugefügt");
             artyom.say("Aufgabe" + wildcard + " wurde hinzugefügt.");
+            
 }
 });
+   
+    
+    function startContinuousArtyom(): void {
+        
+        
+        setTimeout(
+            function(): void {
+                artyom.initialize({
+                    lang: "de-DE",
+                    continuous: true,
+                    listen: true,
+                    interimResults: true,
+                    debug: true
+                
+                }).then(function(): void {
+                    artyom.say("Sage erstelle Aufgabe");
+    
+                    console.log("Ready!");
+                });
+            
+            }, 
+            250);
+    }
+    
 
     document.querySelector("#microphone").addEventListener("click", function (): void {
-        artyom.say("Sage erstelle Aufgabe");
         startContinuousArtyom();
+        
+
     });
     
 
